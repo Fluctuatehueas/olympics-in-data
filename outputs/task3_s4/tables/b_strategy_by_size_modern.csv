@@ -1,0 +1,5 @@
+﻿size_class,n_editions_with_medal,mpa_median,mpa_mean,mpa_p90,top1_share_median,n_sports_medal_median,hhi_median,total_event_median,athletes_median
+中型(51-150),309,0.0455,0.0559,0.1072,0.5,3.0,0.5,4.0,85.0
+大型(>150),282,0.0658,0.0736,0.1367,0.2601,9.0,0.163,19.5,328.5
+小型(11-50),235,0.0606,0.0824,0.1725,1.0,1.0,1.0,2.0,32.0
+微型(≤10),48,0.1667,0.1891,0.275,1.0,1.0,1.0,1.0,7.0

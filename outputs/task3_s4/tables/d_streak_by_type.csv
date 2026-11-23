@@ -1,0 +1,3 @@
+﻿team_type,n_noc,post_rate_median,post_rate_mean,post_rate_p25,post_rate_p75,max_streak_median,n_medal_editions_median,total_medal_median
+大团型(峰值>50),94,0.9259,0.7956,0.6215,1.0,8.5,11.0,59.0
+小团型(峰值≤50),63,0.1548,0.2931,0.0,0.4711,1.0,2.0,2.0

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="960" height="480" fill="#FFFFFF"/>
+<text x="24" y="28" font-size="17" font-weight="600" fill="#1F2933">图 8 · 小团在奖牌桌上的份额正在变大</text>
+<text x="24" y="47" font-size="12" fill="#6B7280">份额 = 小团(≤50)奖牌占当届总奖牌比 / 小团夺牌代表团占当届夺牌代表团比</text>
+<line x1="64" y1="416.0" x2="820" y2="416.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="420.0" font-size="11" text-anchor="end" fill="#6B7280">0</text>
+<line x1="64" y1="344.0" x2="820" y2="344.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="348.0" font-size="11" text-anchor="end" fill="#6B7280">0.1</text>
+<line x1="64" y1="272.0" x2="820" y2="272.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="276.0" font-size="11" text-anchor="end" fill="#6B7280">0.2</text>
+<line x1="64" y1="200.0" x2="820" y2="200.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="204.0" font-size="11" text-anchor="end" fill="#6B7280">0.3</text>
+<line x1="64" y1="128.0" x2="820" y2="128.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="132.0" font-size="11" text-anchor="end" fill="#6B7280">0.4</text>
+<line x1="64" y1="56.0" x2="820" y2="56.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="60.0" font-size="11" text-anchor="end" fill="#6B7280">0.5</text>
+<text x="24" y="48" font-size="11" fill="#6B7280">份额</text>
+<polyline points="74.0,397.7 136.4,393.9 198.7,397.5 261.1,384.1 323.5,374.9 385.8,377.0 448.2,370.2 510.5,355.8 572.9,370.4 635.3,371.6 697.6,365.3 760.0,338.8" fill="none" stroke="#D1495B" stroke-width="2.4"/>
+<circle cx="74.0" cy="397.7" r="2.6" fill="#D1495B"/>
+<circle cx="136.4" cy="393.9" r="2.6" fill="#D1495B"/>
+<circle cx="198.7" cy="397.5" r="2.6" fill="#D1495B"/>
+<circle cx="261.1" cy="384.1" r="2.6" fill="#D1495B"/>
+<circle cx="323.5" cy="374.9" r="2.6" fill="#D1495B"/>
+<circle cx="385.8" cy="377.0" r="2.6" fill="#D1495B"/>
+<circle cx="448.2" cy="370.2" r="2.6" fill="#D1495B"/>
+<circle cx="510.5" cy="355.8" r="2.6" fill="#D1495B"/>
+<circle cx="572.9" cy="370.4" r="2.6" fill="#D1495B"/>
+<circle cx="635.3" cy="371.6" r="2.6" fill="#D1495B"/>
+<circle cx="697.6" cy="365.3" r="2.6" fill="#D1495B"/>
+<circle cx="760.0" cy="338.8" r="2.6" fill="#D1495B"/>
+<polyline points="74.0,256.0 136.4,201.5 198.7,194.5 261.1,191.0 323.5,169.9 385.8,218.0 448.2,211.7 510.5,181.6 572.9,170.3 635.3,198.3 697.6,152.8 760.0,118.6" fill="none" stroke="#1F6FEB" stroke-width="2.0"/>
+<circle cx="74.0" cy="256.0" r="2.6" fill="#1F6FEB"/>
+<circle cx="136.4" cy="201.5" r="2.6" fill="#1F6FEB"/>
+<circle cx="198.7" cy="194.5" r="2.6" fill="#1F6FEB"/>
+<circle cx="261.1" cy="191.0" r="2.6" fill="#1F6FEB"/>
+<circle cx="323.5" cy="169.9" r="2.6" fill="#1F6FEB"/>
+<circle cx="385.8" cy="218.0" r="2.6" fill="#1F6FEB"/>
+<circle cx="448.2" cy="211.7" r="2.6" fill="#1F6FEB"/>
+<circle cx="510.5" cy="181.6" r="2.6" fill="#1F6FEB"/>
+<circle cx="572.9" cy="170.3" r="2.6" fill="#1F6FEB"/>
+<circle cx="635.3" cy="198.3" r="2.6" fill="#1F6FEB"/>
+<circle cx="697.6" cy="152.8" r="2.6" fill="#1F6FEB"/>
+<circle cx="760.0" cy="118.6" r="2.6" fill="#1F6FEB"/>
+<rect x="832" y="88" width="10" height="10" rx="2" fill="#D1495B"/>
+<text x="848" y="97" font-size="11.5" fill="#1F2933">小团奖牌份额</text>
+<rect x="832" y="108" width="10" height="10" rx="2" fill="#1F6FEB"/>
+<text x="848" y="117" font-size="11.5" fill="#1F2933">小团夺牌国份额</text>
+<text x="74.0" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">1980</text>
+<text x="136.4" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">1984</text>
+<text x="198.7" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">1988</text>
+<text x="261.1" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">1992</text>
+<text x="323.5" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">1996</text>
+<text x="385.8" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">2000</text>
+<text x="448.2" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">2004</text>
+<text x="510.5" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">2008</text>
+<text x="572.9" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">2012</text>
+<text x="635.3" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">2016</text>
+<text x="697.6" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">2020</text>
+<text x="760.0" y="434" font-size="9.5" text-anchor="middle" fill="#6B7280">2024</text>
+<text x="24" y="460" font-size="10.5" fill="#6B7280">小团奖牌份额 2.5% → 10.7%，OLS 斜率 +0.148pp/年（R²=0.79，p=1.1e-4）；夺牌国份额 22.2% → 41.3%。</text>
+</svg>

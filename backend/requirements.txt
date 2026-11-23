@@ -1,0 +1,12 @@
+# 后端依赖清单（数据分析链路 + 看板 API）
+# 安装：python -m pip install -r backend/requirements.txt
+# 已验证环境：Python 3.12 + pandas 3.1.1 + numpy 2.5.5（scipy 用于 Task3 S4 统计检验）
+
+# 数据分析链路（backend/src/cleaning.py、features.py、quality_checks.py、visualize.py、task3_s4_*.py）
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+
+# 看板 API（backend/api/main.py）
+fastapi>=0.110
+uvicorn>=0.29

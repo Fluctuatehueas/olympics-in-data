@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# Node / Vite
+node_modules/
+dist/
+.vite/
+
+# 本地工具与临时产物
+workspace/
+.screenshots/
+.commonharness/
+*.log
+
+# 操作系统与编辑器
+.DS_Store
+Thumbs.db

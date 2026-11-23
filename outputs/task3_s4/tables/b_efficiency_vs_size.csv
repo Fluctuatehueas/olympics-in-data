@@ -1,0 +1,8 @@
+﻿size_bin,n_noc_editions_in_bin,n_with_medal,mpa_median,mpa_mean,ci95_low,ci95_high,ci_method
+1-5,30,30,0.2917,0.46,0.25,0.45,"bootstrap percentile on median, B=2000, seed=42"
+6-10,63,63,0.1667,0.2297,0.1429,0.2,"bootstrap percentile on median, B=2000, seed=42"
+11-25,108,108,0.0833,0.12,0.0718,0.0909,"bootstrap percentile on median, B=2000, seed=42"
+26-50,258,258,0.0526,0.0755,0.043,0.0572,"bootstrap percentile on median, B=2000, seed=42"
+51-100,292,292,0.0467,0.0608,0.0415,0.0534,"bootstrap percentile on median, B=2000, seed=42"
+101-200,301,301,0.0417,0.0543,0.0385,0.0476,"bootstrap percentile on median, B=2000, seed=42"
+201+,390,390,0.0712,0.0797,0.0658,0.0739,"bootstrap percentile on median, B=2000, seed=42"

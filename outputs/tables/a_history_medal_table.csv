@@ -1,0 +1,234 @@
+NOC,gold_event,silver_event,bronze_event,total_event,Gold_athlete,Total_athlete,Team,amplification,rank_event
+USA,1095,880,773,2748,2704,5597,United States,2.04,1
+URS,394,317,294,1005,832,2063,Soviet Union,2.05,2
+GBR,305,347,343,995,707,2243,Great Britain,2.25,3
+CHN,302,218,195,715,464,1218,China,1.7,4
+GER,250,276,302,828,620,1938,Germany,2.34,5
+FRA,240,279,299,818,563,1891,France,2.31,6
+ITA,234,206,228,668,550,1548,Italy,2.32,7
+JPN,189,160,190,539,325,1063,Japan,1.97,8
+HUN,188,163,181,532,445,1191,Hungary,2.24,9
+AUS,181,192,227,600,411,1553,Australia,2.59,10
+SWE,155,180,184,519,363,1137,Sweden,2.19,11
+RUS,153,143,164,460,296,905,Russia,1.97,12
+GDR,153,129,127,409,339,843,East Germany,2.06,13
+NED,112,113,138,363,345,1102,Netherlands,3.04,14
+KOR,109,98,108,315,206,648,South Korea,2.06,15
+FIN,102,85,121,308,130,472,Finland,1.53,16
+ROU,92,102,122,316,175,681,Romania,2.16,17
+CUB,86,71,81,238,174,434,Cuba,1.82,18
+CAN,79,115,159,353,207,881,Canada,2.5,19
+POL,74,96,144,314,126,602,Poland,1.92,20
+NZL,64,40,54,158,145,343,New Zealand,2.17,21
+NOR,63,53,53,169,230,611,Norway,3.62,22
+SUI,58,85,78,221,95,429,Switzerland,1.94,23
+BUL,57,88,85,230,63,353,Bulgaria,1.53,24
+FRG,56,67,81,204,144,504,West Germany,2.47,25
+ESP,52,75,56,183,153,640,Spain,3.5,26
+DEN,51,85,88,224,186,632,Denmark,2.82,27
+TCH,49,50,47,146,79,330,Czechoslovakia,2.26,28
+BEL,48,59,68,175,117,480,Belgium,2.74,29
+EUN,45,38,29,112,92,220,Unified Team,1.96,30
+TUR,42,32,42,116,42,119,Turkey,1.03,31
+BRA,40,48,80,168,142,597,Brazil,3.55,32
+UKR,39,43,75,157,49,233,Ukraine,1.48,33
+KEN,39,44,38,121,42,127,Kenya,1.05,34
+GRE,37,45,46,128,41,179,Greece,1.4,35
+RSA,27,38,32,97,34,155,South Africa,1.6,36
+JAM,27,36,28,91,48,184,Jamaica,2.02,37
+AUT,26,38,47,111,30,174,Austria,1.57,38
+YUG,26,29,28,83,130,383,Yugoslavia,4.61,39
+IRI,24,29,34,87,24,87,Iran,1.0,40
+ETH,24,13,24,61,24,61,Ethiopia,1.0,41
+ARG,22,27,30,79,92,336,Argentina,4.25,42
+CZE,22,21,27,70,24,93,Czech Republic,1.33,43
+KAZ,20,25,40,85,20,86,Kazakhstan,1.01,44
+ROC,20,25,23,68,41,149,Russia,2.19,45
+UZB,20,9,22,51,20,51,Uzbekistan,1.0,46
+PRK,16,17,27,60,16,73,North Korea,1.22,47
+CRO,16,15,17,48,62,169,Croatia,3.52,48
+BLR,14,31,46,91,19,134,Belarus,1.47,49
+IRL,14,11,17,42,16,50,Ireland,1.19,50
+MEX,13,27,36,76,30,145,Mexico,1.91,51
+GEO,13,14,20,47,13,47,Georgia,1.0,52
+THA,11,11,16,38,11,38,Thailand,1.0,53
+IND,10,10,21,41,132,236,India,5.76,54
+INA,10,13,15,38,15,50,Indonesia,1.32,55
+EST,10,9,17,36,13,48,Estonia,1.33,56
+SVK,10,13,10,33,14,50,Slovakia,1.52,57
+SLO,10,10,11,31,11,38,Slovenia,1.23,58
+AZE,9,17,32,58,9,58,Azerbaijan,1.0,59
+EGY,9,10,17,36,9,36,Egypt,1.0,60
+SRB,9,8,12,29,46,149,Serbia,5.14,61
+MAR,8,5,13,26,8,44,Morocco,1.69,62
+BAH,8,2,6,16,16,42,Bahamas,2.62,63
+TPE,7,11,25,43,9,73,Chinese Taipei-1,1.7,64
+ALG,7,4,9,20,7,20,Algeria,1.0,65
+POR,6,11,15,32,7,50,Portugal,1.56,66
+LTU,6,9,15,30,6,69,Lithuania,2.3,67
+COL,5,16,16,37,5,37,Colombia,1.0,68
+TUN,5,5,8,18,5,18,Tunisia,1.0,69
+UGA,5,5,3,13,5,13,Uganda,1.0,70
+LAT,4,11,6,21,7,25,Latvia,1.19,71
+ISR,4,6,10,20,4,34,Israel,1.7,72
+DOM,4,5,6,15,4,42,Dominican Republic,2.8,73
+HKG,4,3,6,13,4,16,Hong Kong,1.23,74
+PAK,4,3,4,11,43,122,Pakistan,11.09,75
+ECU,4,4,2,10,4,11,Ecuador,1.1,76
+LUX,4,2,0,6,4,6,Luxembourg,1.0,77
+NGR,3,9,14,26,23,101,Nigeria,3.88,78
+TTO,3,5,11,19,7,32,Trinidad and Tobago,1.68,79
+VEN,3,6,10,19,3,19,Venezuela,1.0,80
+PHI,3,5,10,18,3,18,Philippines,1.0,81
+CHI,3,8,4,15,4,34,Chile,2.27,82
+ANZ,3,4,5,12,20,29,Australasia,2.42,83
+BRN,3,3,2,8,3,8,Bahrain,1.0,84
+ZIM,3,4,1,8,17,22,Zimbabwe,2.75,85
+CMR,3,1,1,5,20,22,Cameroon,4.4,86
+KOS,3,1,1,5,3,5,Kosovo,1.0,87
+MGL,2,12,17,31,2,31,Mongolia,1.0,88
+ARM,2,10,12,24,2,24,Armenia,1.0,89
+PUR,2,2,8,12,2,12,Puerto Rico,1.0,90
+URU,2,2,6,10,31,63,Uruguay,6.3,91
+QAT,2,1,6,9,2,10,Qatar,1.11,92
+SCG,2,4,3,9,12,64,Serbia and Montenegro,7.11,93
+FIJ,2,1,1,4,26,53,Fiji,13.25,94
+TJK,1,1,5,7,1,7,Tajikistan,1.0,95
+SGP,1,2,3,6,1,10,Singapore,1.67,96
+AIN,1,3,1,5,1,6,AIN,1.2,97
+CIV,1,1,3,5,1,5,Cote d'Ivoire,1.0,98
+GRN,1,1,3,5,1,5,Grenada,1.0,99
+IOA,1,1,3,5,1,5,Individual Olympic Athletes,1.0,100
+PER,1,3,1,5,1,16,Peru,3.2,101
+BOT,1,2,1,4,1,14,Botswana,3.5,102
+CRC,1,1,2,4,1,4,Costa Rica,1.0,103
+JOR,1,2,1,4,1,4,Jordan,1.0,104
+PAN,1,1,2,4,1,4,Panama,1.0,105
+SYR,1,1,2,4,1,4,Syria,1.0,106
+VIE,1,3,0,4,1,4,Vietnam,1.0,107
+GUA,1,1,1,3,1,3,Guatemala,1.0,108
+HAI,1,1,1,3,1,7,Haiti,2.33,109
+BDI,1,1,0,2,1,2,Burundi,1.0,110
+BER,1,0,1,2,1,2,Bermuda,1.0,111
+LCA,1,1,0,2,1,2,Saint Lucia,1.0,112
+MOZ,1,0,1,2,1,2,Mozambique,1.0,113
+SUR,1,0,1,2,1,2,Suriname,1.0,114
+UAE,1,0,1,2,1,2,United Arab Emirates,1.0,115
+DMA,1,0,0,1,1,1,Dominica,1.0,116
+MAS,0,8,7,15,0,22,Malaysia,1.47,117
+KGZ,0,5,7,12,0,12,Kyrgyzstan,1.0,118
+MDA,0,3,9,12,0,13,Moldova,1.08,119
+BOH,0,1,4,5,0,9,Bohemia,1.8,120
+GHA,0,1,4,5,0,24,Ghana,4.8,121
+NAM,0,5,0,5,0,5,Namibia,1.0,122
+ISL,0,2,2,4,0,17,Iceland,4.25,123
+KSA,0,2,2,4,0,7,Saudi Arabia,1.75,124
+LIB,0,2,2,4,0,4,Lebanon,1.0,125
+KUW,0,0,3,3,0,3,Kuwait,1.0,126
+SMR,0,1,2,3,0,4,San Marino,1.33,127
+ZAM,0,1,2,3,0,3,Zambia,1.0,128
+AFG,0,0,2,2,0,2,Afghanistan,1.0,129
+ALB,0,0,2,2,0,2,Albania,1.0,130
+CYP,0,2,0,2,0,2,Cyprus,1.0,131
+MKD,0,1,1,2,0,2,Macedonia,1.0,132
+NIG,0,1,1,2,0,2,Niger,1.0,133
+SRI,0,2,0,2,0,2,Sri Lanka,1.0,134
+TAN,0,2,0,2,0,2,Tanzania,1.0,135
+UAR,0,1,1,2,0,2,United Arab Republic,1.0,136
+WIF,0,0,2,2,0,5,Circus,2.5,137
+AHO,0,1,0,1,0,1,Netherlands Antilles,1.0,138
+BAR,0,0,1,1,0,1,Barbados,1.0,139
+BUR,0,0,1,1,0,1,Burkina Faso,1.0,140
+CPV,0,0,1,1,0,1,Cape Verde,1.0,141
+DJI,0,0,1,1,0,1,Djibouti,1.0,142
+EOR,0,0,1,1,0,1,Refugee Olympic Team,1.0,143
+ERI,0,0,1,1,0,1,Eritrea,1.0,144
+GAB,0,1,0,1,0,1,Gabon,1.0,145
+GUY,0,0,1,1,0,1,Guyana,1.0,146
+IRQ,0,0,1,1,0,1,Iraq,1.0,147
+ISV,0,1,0,1,0,1,United States Virgin Islands,1.0,148
+MNE,0,1,0,1,0,14,Montenegro,14.0,149
+MON,0,0,1,1,0,1,Monaco,1.0,150
+MRI,0,0,1,1,0,1,Mauritius,1.0,151
+PAR,0,1,0,1,0,17,Paraguay,17.0,152
+SEN,0,1,0,1,0,1,Senegal,1.0,153
+SUD,0,1,0,1,0,1,Sudan,1.0,154
+TGA,0,1,0,1,0,1,Tonga,1.0,155
+TKM,0,1,0,1,0,1,Turkmenistan,1.0,156
+TOG,0,0,1,1,0,1,Togo,1.0,157
+AND,0,0,0,0,0,0,Andorra,,158
+ANG,0,0,0,0,0,0,Angola,,159
+ANT,0,0,0,0,0,0,Antigua and Barbuda,,160
+ARU,0,0,0,0,0,0,Aruba,,161
+ASA,0,0,0,0,0,0,American Samoa,,162
+BAN,0,0,0,0,0,0,Bangladesh,,163
+BEN,0,0,0,0,0,0,Benin,,164
+BHU,0,0,0,0,0,0,Bhutan,,165
+BIH,0,0,0,0,0,0,Bosnia and Herzegovina,,166
+BIZ,0,0,0,0,0,0,Belize,,167
+BOL,0,0,0,0,0,0,Bolivia,,168
+BRU,0,0,0,0,0,0,Brunei,,169
+CAF,0,0,0,0,0,0,Central African Republic,,170
+CAM,0,0,0,0,0,0,GyoshuII,,171
+CAY,0,0,0,0,0,0,Cayman Islands,,172
+CGO,0,0,0,0,0,0,Congo (Brazzaville),,173
+CHA,0,0,0,0,0,0,Chad,,174
+COD,0,0,0,0,0,0,Congo (Kinshasa),,175
+COK,0,0,0,0,0,0,Cook Islands,,176
+COM,0,0,0,0,0,0,Comoros,,177
+ESA,0,0,0,0,0,0,El Salvador,,178
+FSM,0,0,0,0,0,0,Federated States of Micronesia,,179
+GAM,0,0,0,0,0,0,Gambia,,180
+GBS,0,0,0,0,0,0,Guinea Bissau,,181
+GEQ,0,0,0,0,0,0,Equatorial Guinea,,182
+GUI,0,0,0,0,0,0,Guinea,,183
+GUM,0,0,0,0,0,0,Guam,,184
+HON,0,0,0,0,0,0,Honduras,,185
+IVB,0,0,0,0,0,0,British Virgin Islands,,186
+KIR,0,0,0,0,0,0,Kiribati,,187
+LAO,0,0,0,0,0,0,Laos,,188
+LBA,0,0,0,0,0,0,Libya,,189
+LBN,0,0,0,0,0,0,Lebanon,,190
+LBR,0,0,0,0,0,0,Liberia,,191
+LES,0,0,0,0,0,0,Lesotho,,192
+LIE,0,0,0,0,0,0,Liechtenstein,,193
+MAD,0,0,0,0,0,0,Madagascar,,194
+MAL,0,0,0,0,0,0,Malaya,,195
+MAW,0,0,0,0,0,0,Malawi,,196
+MDV,0,0,0,0,0,0,Maldives,,197
+MHL,0,0,0,0,0,0,Marshall Islands,,198
+MLI,0,0,0,0,0,0,Mali,,199
+MLT,0,0,0,0,0,0,Malta,,200
+MTN,0,0,0,0,0,0,Mauritania,,201
+MYA,0,0,0,0,0,0,Myanmar,,202
+NBO,0,0,0,0,0,0,North Borneo,,203
+NCA,0,0,0,0,0,0,Nicaragua,,204
+NEP,0,0,0,0,0,0,Nepal,,205
+NFL,0,0,0,0,0,0,Newfoundland,,206
+NRU,0,0,0,0,0,0,Nauru,,207
+OMA,0,0,0,0,0,0,Oman,,208
+PLE,0,0,0,0,0,0,Palestine,,209
+PLW,0,0,0,0,0,0,Palau,,210
+PNG,0,0,0,0,0,0,Papua New Guinea,,211
+RHO,0,0,0,0,0,0,Rhodesia,,212
+ROT,0,0,0,0,0,0,Refugee Olympic Athletes,,213
+RWA,0,0,0,0,0,0,Rwanda,,214
+SAA,0,0,0,0,0,0,Saar,,215
+SAM,0,0,0,0,0,0,Samoa,,216
+SEY,0,0,0,0,0,0,Seychelles,,217
+SKN,0,0,0,0,0,0,Saint Kitts and Nevis,,218
+SLE,0,0,0,0,0,0,Sierra Leone,,219
+SOL,0,0,0,0,0,0,Solomon Islands,,220
+SOM,0,0,0,0,0,0,Somalia,,221
+SSD,0,0,0,0,0,0,South Sudan,,222
+STP,0,0,0,0,0,0,Sao Tome and Principe,,223
+SWZ,0,0,0,0,0,0,Swaziland,,224
+TLS,0,0,0,0,0,0,Timor Leste,,225
+TUV,0,0,0,0,0,0,Tuvalu,,226
+UNK,0,0,0,0,0,0,Unknown,,227
+VAN,0,0,0,0,0,0,Vanuatu,,228
+VIN,0,0,0,0,0,0,Saint Vincent and the Grenadines,,229
+VNM,0,0,0,0,0,0,South Vietnam,,230
+YAR,0,0,0,0,0,0,North Yemen,,231
+YEM,0,0,0,0,0,0,Yemen,,232
+YMD,0,0,0,0,0,0,South Yemen,,233

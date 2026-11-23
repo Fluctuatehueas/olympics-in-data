@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="960" height="480" fill="#FFFFFF"/>
+<text x="64" y="26" font-size="17" font-weight="600" fill="#1F2933">图 6 · 口径的魔力：2024 年金牌数两套口径对照</text>
+<text x="64" y="44" font-size="12" fill="#6B7280">同一数据集，去重与否导致的金牌数差异</text>
+<line x1="64" y1="416.0" x2="820" y2="416.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="420.0" font-size="11" text-anchor="end" fill="#6B7280">0</text>
+<line x1="64" y1="324.0" x2="820" y2="324.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="328.0" font-size="11" text-anchor="end" fill="#6B7280">37</text>
+<line x1="64" y1="232.0" x2="820" y2="232.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="236.0" font-size="11" text-anchor="end" fill="#6B7280">73</text>
+<line x1="64" y1="140.0" x2="820" y2="140.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="144.0" font-size="11" text-anchor="end" fill="#6B7280">110</text>
+<line x1="64" y1="48.0" x2="820" y2="48.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="52.0" font-size="11" text-anchor="end" fill="#6B7280">147</text>
+<text x="64" y="34" font-size="11" fill="#6B7280">金牌数</text>
+<rect x="38.6" y="320.7" width="24.2" height="95.3" fill="#1F6FEB" rx="2"/>
+<rect x="65.2" y="237.9" width="24.2" height="178.1" fill="#D1495B" rx="2"/>
+<text x="64.0" y="434" font-size="11" text-anchor="middle" fill="#6B7280">CHN</text>
+<rect x="114.2" y="323.2" width="24.2" height="92.8" fill="#1F6FEB" rx="2"/>
+<rect x="140.8" y="87.4" width="24.2" height="328.6" fill="#D1495B" rx="2"/>
+<text x="139.6" y="434" font-size="11" text-anchor="middle" fill="#6B7280">USA</text>
+<rect x="189.8" y="365.8" width="24.2" height="50.2" fill="#1F6FEB" rx="2"/>
+<rect x="216.4" y="348.3" width="24.2" height="67.7" fill="#D1495B" rx="2"/>
+<text x="215.2" y="434" font-size="11" text-anchor="middle" fill="#6B7280">JPN</text>
+<rect x="265.4" y="370.9" width="24.2" height="45.1" fill="#1F6FEB" rx="2"/>
+<rect x="292.0" y="333.2" width="24.2" height="82.8" fill="#D1495B" rx="2"/>
+<text x="290.8" y="434" font-size="11" text-anchor="middle" fill="#6B7280">AUS</text>
+<rect x="341.0" y="380.9" width="24.2" height="35.1" fill="#1F6FEB" rx="2"/>
+<rect x="367.6" y="248.0" width="24.2" height="168.0" fill="#D1495B" rx="2"/>
+<text x="366.4" y="434" font-size="11" text-anchor="middle" fill="#6B7280">NED</text>
+<rect x="416.6" y="383.4" width="24.2" height="32.6" fill="#1F6FEB" rx="2"/>
+<rect x="443.2" y="318.2" width="24.2" height="97.8" fill="#D1495B" rx="2"/>
+<text x="442.0" y="434" font-size="11" text-anchor="middle" fill="#6B7280">GBR</text>
+<rect x="492.2" y="383.4" width="24.2" height="32.6" fill="#1F6FEB" rx="2"/>
+<rect x="518.8" y="283.1" width="24.2" height="132.9" fill="#D1495B" rx="2"/>
+<text x="517.6" y="434" font-size="11" text-anchor="middle" fill="#6B7280">FRA</text>
+<rect x="567.8" y="383.4" width="24.2" height="32.6" fill="#1F6FEB" rx="2"/>
+<rect x="594.4" y="363.3" width="24.2" height="52.7" fill="#D1495B" rx="2"/>
+<text x="593.2" y="434" font-size="11" text-anchor="middle" fill="#6B7280">KOR</text>
+<rect x="643.4" y="385.9" width="24.2" height="30.1" fill="#1F6FEB" rx="2"/>
+<rect x="670.0" y="338.2" width="24.2" height="77.8" fill="#D1495B" rx="2"/>
+<text x="668.8" y="434" font-size="11" text-anchor="middle" fill="#6B7280">ITA</text>
+<rect x="719.0" y="388.4" width="24.2" height="27.6" fill="#1F6FEB" rx="2"/>
+<rect x="745.6" y="363.3" width="24.2" height="52.7" fill="#D1495B" rx="2"/>
+<text x="744.4" y="434" font-size="11" text-anchor="middle" fill="#6B7280">GER</text>
+<rect x="836" y="48" width="10" height="10" rx="2" fill="#1F6FEB"/>
+<text x="852" y="57" font-size="11.5" fill="#1F2933">小项口径</text>
+<rect x="836" y="68" width="10" height="10" rx="2" fill="#D1495B"/>
+<text x="852" y="77" font-size="11.5" fill="#1F2933">运动员行口径</text>
+<text x="64" y="450" font-size="10.5" fill="#6B7280">两口径金牌逐国对照。USA 37 → 131，NED 14 → 67；本数据口径下与 IOC 官方数字存在差异，报告中已声明。</text>
+</svg>

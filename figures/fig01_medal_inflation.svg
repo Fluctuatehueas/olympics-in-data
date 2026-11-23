@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="960" height="480" fill="#FFFFFF"/>
+<text x="64" y="26" font-size="17" font-weight="600" fill="#1F2933">图 1 · 奖牌膨胀：项目增长快于参赛国增长</text>
+<text x="64" y="44" font-size="12" fill="#6B7280">两条曲线均以其首值为 1 做指数化处理</text>
+<line x1="64" y1="416.0" x2="820" y2="416.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="420.0" font-size="11" text-anchor="end" fill="#6B7280">0</text>
+<line x1="64" y1="342.4" x2="820" y2="342.4" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="346.4" font-size="11" text-anchor="end" fill="#6B7280">235</text>
+<line x1="64" y1="268.8" x2="820" y2="268.8" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="272.8" font-size="11" text-anchor="end" fill="#6B7280">469</text>
+<line x1="64" y1="195.2" x2="820" y2="195.2" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="199.2" font-size="11" text-anchor="end" fill="#6B7280">704</text>
+<line x1="64" y1="121.6" x2="820" y2="121.6" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="125.6" font-size="11" text-anchor="end" fill="#6B7280">938</text>
+<line x1="64" y1="48.0" x2="820" y2="48.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="56" y="52.0" font-size="11" text-anchor="end" fill="#6B7280">1,173</text>
+<text x="64" y="34" font-size="11" fill="#6B7280">绝对数量</text>
+<text x="64.0" y="436" font-size="11" text-anchor="middle" fill="#6B7280">1896</text>
+<text x="158.5" y="436" font-size="11" text-anchor="middle" fill="#6B7280">1912</text>
+<text x="253.0" y="436" font-size="11" text-anchor="middle" fill="#6B7280">1928</text>
+<text x="442.0" y="436" font-size="11" text-anchor="middle" fill="#6B7280">1960</text>
+<text x="536.5" y="436" font-size="11" text-anchor="middle" fill="#6B7280">1976</text>
+<text x="631.0" y="436" font-size="11" text-anchor="middle" fill="#6B7280">1992</text>
+<text x="725.5" y="436" font-size="11" text-anchor="middle" fill="#6B7280">2008</text>
+<text x="820.0" y="436" font-size="11" text-anchor="middle" fill="#6B7280">2024</text>
+<polyline points="64.0,378.3 87.6,324.7 111.2,328.4 134.9,315.6 158.5,316.8 205.8,276.0 229.4,293.3 253.0,304.3 276.6,299.9 300.2,283.6 371.1,278.2 394.8,272.6 418.4,269.4 442.0,271.3 465.6,258.8 489.2,250.6 512.9,227.7 536.5,223.6 560.1,218.0 583.8,201.0 607.4,184.4 631.0,160.9 654.6,152.1 678.2,125.7 701.9,125.1 725.5,115.7 749.1,114.1 772.8,110.6 796.4,81.5 820.0,100.0" fill="none" stroke="#C9A227" stroke-width="2.2"/>
+<polyline points="64.0,412.2 87.6,406.3 111.2,411.3 134.9,409.1 158.5,406.9 205.8,406.9 229.4,401.9 253.0,401.6 276.6,401.2 300.2,400.6 371.1,397.5 394.8,394.3 418.4,393.4 442.0,389.6 465.6,386.8 489.2,380.9 512.9,378.0 536.5,387.1 560.1,390.9 583.8,372.1 607.4,366.1 631.0,363.0 654.6,354.2 678.2,353.2 701.9,352.9 725.5,352.0 749.1,351.7 772.8,351.0 796.4,351.4 820.0,351.4" fill="none" stroke="#1F6FEB" stroke-width="2.2"/>
+<rect x="836" y="48" width="10" height="10" rx="2" fill="#C9A227"/>
+<text x="852" y="57" font-size="11.5" fill="#1F2933">奖牌总数（小项口径）</text>
+<rect x="836" y="68" width="10" height="10" rx="2" fill="#1F6FEB"/>
+<text x="852" y="77" font-size="11.5" fill="#1F2933">参赛代表团数</text>
+<text x="64" y="450" font-size="10.5" fill="#6B7280">小项口径，排除 1906 届。2024 年奖牌为 1896 年的 3.46 倍，代表团为 6.65 倍。</text>
+</svg>

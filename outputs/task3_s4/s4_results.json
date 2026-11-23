@@ -1,0 +1,2373 @@
+{
+  "meta": {
+    "script": "backend/src/task3_s4_analysis.py",
+    "upstream": [
+      "docs/Task3/s4_base.csv",
+      "docs/Task3/s4_noc_first_medal.csv",
+      "docs/Task1/medal_event_level.csv"
+    ],
+    "primary_caliber": "小项口径 Total_event（合计 17,901）",
+    "reference_caliber": "运动员行口径 Total_athlete（合计 38,360）",
+    "small_threshold": 50,
+    "small_threshold_sensitivity": [
+      10,
+      25,
+      50,
+      100,
+      150
+    ],
+    "modern_from": 1980,
+    "big_group_for_compare": "athletes > 150",
+    "bootstrap": {
+      "n_boot": 2000,
+      "seed": 42,
+      "method": "percentile on median"
+    },
+    "tests": "scipy.stats spearmanr / mannwhitneyu(two-sided) / linregress",
+    "excluded_years": [
+      1906
+    ]
+  },
+  "anchors": {
+    "checks": [
+      {
+        "check": "小项口径奖牌总数(medal_event_level)",
+        "expect": 17901,
+        "actual": 17901,
+        "ok": true
+      },
+      {
+        "check": "小项口径奖牌总数(s4_base.Total_event)",
+        "expect": 17901,
+        "actual": 17901,
+        "ok": true
+      },
+      {
+        "check": "运动员行口径奖牌总数",
+        "expect": 38360,
+        "actual": 38360,
+        "ok": true
+      },
+      {
+        "check": "代表团届次样本量",
+        "expect": 3201,
+        "actual": 3201,
+        "ok": true
+      },
+      {
+        "check": "代表团数",
+        "expect": 233,
+        "actual": 233,
+        "ok": true
+      },
+      {
+        "check": "官方届次数",
+        "expect": 30,
+        "actual": 30,
+        "ok": true
+      },
+      {
+        "check": "1906 应为 0 行",
+        "expect": 0,
+        "actual": 0,
+        "ok": true
+      }
+    ],
+    "all_pass": true
+  },
+  "A_panorama": {
+    "size_distribution": [
+      {
+        "size_class": "中型(51-150)",
+        "era": "早期(<1980)",
+        "n_noc_editions": 209,
+        "n_with_medal": 170,
+        "medal_rate": 0.8134,
+        "gold": 323,
+        "silver": 345,
+        "bronze": 384,
+        "total_medal": 1052,
+        "medal_share_of_total": 0.0588,
+        "athlete_sum": 19421,
+        "median_athletes": 93.0
+      },
+      {
+        "size_class": "中型(51-150)",
+        "era": "近代(1980+)",
+        "n_noc_editions": 348,
+        "n_with_medal": 309,
+        "medal_rate": 0.8879,
+        "gold": 411,
+        "silver": 447,
+        "bronze": 636,
+        "total_medal": 1494,
+        "medal_share_of_total": 0.0835,
+        "athlete_sum": 30735,
+        "median_athletes": 80.0
+      },
+      {
+        "size_class": "大型(>150)",
+        "era": "早期(<1980)",
+        "n_noc_editions": 223,
+        "n_with_medal": 222,
+        "medal_rate": 0.9955,
+        "gold": 2001,
+        "silver": 1949,
+        "bronze": 1928,
+        "total_medal": 5878,
+        "medal_share_of_total": 0.3284,
+        "athlete_sum": 68297,
+        "median_athletes": 265.0
+      },
+      {
+        "size_class": "大型(>150)",
+        "era": "近代(1980+)",
+        "n_noc_editions": 282,
+        "n_with_medal": 282,
+        "medal_rate": 1.0,
+        "gold": 2796,
+        "silver": 2694,
+        "bronze": 2908,
+        "total_medal": 8398,
+        "medal_share_of_total": 0.4691,
+        "athlete_sum": 101488,
+        "median_athletes": 328.5
+      },
+      {
+        "size_class": "小型(11-50)",
+        "era": "早期(<1980)",
+        "n_noc_editions": 328,
+        "n_with_medal": 131,
+        "medal_rate": 0.3994,
+        "gold": 103,
+        "silver": 117,
+        "bronze": 138,
+        "total_medal": 358,
+        "medal_share_of_total": 0.02,
+        "athlete_sum": 8933,
+        "median_athletes": 26.0
+      },
+      {
+        "size_class": "小型(11-50)",
+        "era": "近代(1980+)",
+        "n_noc_editions": 621,
+        "n_with_medal": 235,
+        "medal_rate": 0.3784,
+        "gold": 138,
+        "silver": 186,
+        "bronze": 251,
+        "total_medal": 575,
+        "medal_share_of_total": 0.0321,
+        "athlete_sum": 15733,
+        "median_athletes": 23.0
+      },
+      {
+        "size_class": "微型(≤10)",
+        "era": "早期(<1980)",
+        "n_noc_editions": 267,
+        "n_with_medal": 45,
+        "medal_rate": 0.1685,
+        "gold": 29,
+        "silver": 26,
+        "bronze": 33,
+        "total_medal": 88,
+        "medal_share_of_total": 0.0049,
+        "athlete_sum": 1255,
+        "median_athletes": 4.0
+      },
+      {
+        "size_class": "微型(≤10)",
+        "era": "近代(1980+)",
+        "n_noc_editions": 923,
+        "n_with_medal": 48,
+        "medal_rate": 0.052,
+        "gold": 15,
+        "silver": 19,
+        "bronze": 24,
+        "total_medal": 58,
+        "medal_share_of_total": 0.0032,
+        "athlete_sum": 4970,
+        "median_athletes": 5.0
+      }
+    ],
+    "small_vs_big_by_year": [
+      {
+        "Year": 1896,
+        "small_n": 10,
+        "small_medal_n": 8,
+        "small_medal": 62,
+        "small_athletes": 138,
+        "big_n": 2,
+        "big_medal_n": 2,
+        "big_medal": 58,
+        "small_medal_rate": 0.8,
+        "big_medal_rate": 1.0,
+        "rate_gap_small_minus_big": -0.2,
+        "total_noc": 12,
+        "small_share_of_noc": 0.8333,
+        "small_medal_share": 0.5167
+      },
+      {
+        "Year": 1900,
+        "small_n": 24,
+        "small_medal_n": 17,
+        "small_medal": 51,
+        "small_athletes": 256,
+        "big_n": 7,
+        "big_medal_n": 7,
+        "big_medal": 240,
+        "small_medal_rate": 0.7083,
+        "big_medal_rate": 1.0,
+        "rate_gap_small_minus_big": -0.2917,
+        "total_noc": 31,
+        "small_share_of_noc": 0.7742,
+        "small_medal_share": 0.1753
+      },
+      {
+        "Year": 1904,
+        "small_n": 12,
+        "small_medal_n": 9,
+        "small_medal": 27,
+        "small_athletes": 76,
+        "big_n": 3,
+        "big_medal_n": 3,
+        "big_medal": 252,
+        "small_medal_rate": 0.75,
+        "big_medal_rate": 1.0,
+        "rate_gap_small_minus_big": -0.25,
+        "total_noc": 15,
+        "small_share_of_noc": 0.8,
+        "small_medal_share": 0.0968
+      },
+      {
+        "Year": 1908,
+        "small_n": 9,
+        "small_medal_n": 6,
+        "small_medal": 17,
+        "small_athletes": 194,
+        "big_n": 13,
+        "big_medal_n": 13,
+        "big_medal": 303,
+        "small_medal_rate": 0.6667,
+        "big_medal_rate": 1.0,
+        "rate_gap_small_minus_big": -0.3333,
+        "total_noc": 22,
+        "small_share_of_noc": 0.4091,
+        "small_medal_share": 0.0531
+      },
+      {
+        "Year": 1912,
+        "small_n": 12,
+        "small_medal_n": 3,
+        "small_medal": 11,
+        "small_athletes": 188,
+        "big_n": 17,
+        "big_medal_n": 16,
+        "big_medal": 305,
+        "small_medal_rate": 0.25,
+        "big_medal_rate": 0.9412,
+        "rate_gap_small_minus_big": -0.6912,
+        "total_noc": 29,
+        "small_share_of_noc": 0.4138,
+        "small_medal_share": 0.0348
+      },
+      {
+        "Year": 1920,
+        "small_n": 13,
+        "small_medal_n": 6,
+        "small_medal": 13,
+        "small_athletes": 248,
+        "big_n": 16,
+        "big_medal_n": 16,
+        "big_medal": 433,
+        "small_medal_rate": 0.4615,
+        "big_medal_rate": 1.0,
+        "rate_gap_small_minus_big": -0.5385,
+        "total_noc": 29,
+        "small_share_of_noc": 0.4483,
+        "small_medal_share": 0.0291
+      },
+      {
+        "Year": 1924,
+        "small_n": 22,
+        "small_medal_n": 9,
+        "small_medal": 16,
+        "small_athletes": 545,
+        "big_n": 23,
+        "big_medal_n": 22,
+        "big_medal": 375,
+        "small_medal_rate": 0.4091,
+        "big_medal_rate": 0.9565,
+        "rate_gap_small_minus_big": -0.5474,
+        "total_noc": 45,
+        "small_share_of_noc": 0.4889,
+        "small_medal_share": 0.0409
+      },
+      {
+        "Year": 1928,
+        "small_n": 23,
+        "small_medal_n": 12,
+        "small_medal": 24,
+        "small_athletes": 520,
+        "big_n": 23,
+        "big_medal_n": 22,
+        "big_medal": 332,
+        "small_medal_rate": 0.5217,
+        "big_medal_rate": 0.9565,
+        "rate_gap_small_minus_big": -0.4348,
+        "total_noc": 46,
+        "small_share_of_noc": 0.5,
+        "small_medal_share": 0.0674
+      },
+      {
+        "Year": 1932,
+        "small_n": 31,
+        "small_medal_n": 13,
+        "small_medal": 36,
+        "small_athletes": 354,
+        "big_n": 16,
+        "big_medal_n": 15,
+        "big_medal": 334,
+        "small_medal_rate": 0.4194,
+        "big_medal_rate": 0.9375,
+        "rate_gap_small_minus_big": -0.5181,
+        "total_noc": 47,
+        "small_share_of_noc": 0.6596,
+        "small_medal_share": 0.0973
+      },
+      {
+        "Year": 1936,
+        "small_n": 19,
+        "small_medal_n": 8,
+        "small_medal": 17,
+        "small_athletes": 408,
+        "big_n": 30,
+        "big_medal_n": 24,
+        "big_medal": 405,
+        "small_medal_rate": 0.4211,
+        "big_medal_rate": 0.8,
+        "rate_gap_small_minus_big": -0.3789,
+        "total_noc": 49,
+        "small_share_of_noc": 0.3878,
+        "small_medal_share": 0.0403
+      },
+      {
+        "Year": 1948,
+        "small_n": 27,
+        "small_medal_n": 9,
+        "small_medal": 18,
+        "small_athletes": 487,
+        "big_n": 32,
+        "big_medal_n": 29,
+        "big_medal": 421,
+        "small_medal_rate": 0.3333,
+        "big_medal_rate": 0.9062,
+        "rate_gap_small_minus_big": -0.5729,
+        "total_noc": 59,
+        "small_share_of_noc": 0.4576,
+        "small_medal_share": 0.041
+      },
+      {
+        "Year": 1952,
+        "small_n": 31,
+        "small_medal_n": 9,
+        "small_medal": 25,
+        "small_athletes": 464,
+        "big_n": 38,
+        "big_medal_n": 34,
+        "big_medal": 432,
+        "small_medal_rate": 0.2903,
+        "big_medal_rate": 0.8947,
+        "rate_gap_small_minus_big": -0.6044,
+        "total_noc": 69,
+        "small_share_of_noc": 0.4493,
+        "small_medal_share": 0.0547
+      },
+      {
+        "Year": 1956,
+        "small_n": 47,
+        "small_medal_n": 14,
+        "small_medal": 38,
+        "small_athletes": 907,
+        "big_n": 25,
+        "big_medal_n": 24,
+        "big_medal": 429,
+        "small_medal_rate": 0.2979,
+        "big_medal_rate": 0.96,
+        "rate_gap_small_minus_big": -0.6621,
+        "total_noc": 72,
+        "small_share_of_noc": 0.6528,
+        "small_medal_share": 0.0814
+      },
+      {
+        "Year": 1960,
+        "small_n": 47,
+        "small_medal_n": 10,
+        "small_medal": 16,
+        "small_athletes": 915,
+        "big_n": 37,
+        "big_medal_n": 34,
+        "big_medal": 445,
+        "small_medal_rate": 0.2128,
+        "big_medal_rate": 0.9189,
+        "rate_gap_small_minus_big": -0.7061,
+        "total_noc": 84,
+        "small_share_of_noc": 0.5595,
+        "small_medal_share": 0.0347
+      },
+      {
+        "Year": 1964,
+        "small_n": 57,
+        "small_medal_n": 11,
+        "small_medal": 19,
+        "small_athletes": 983,
+        "big_n": 36,
+        "big_medal_n": 30,
+        "big_medal": 482,
+        "small_medal_rate": 0.193,
+        "big_medal_rate": 0.8333,
+        "rate_gap_small_minus_big": -0.6403,
+        "total_noc": 93,
+        "small_share_of_noc": 0.6129,
+        "small_medal_share": 0.0379
+      },
+      {
+        "Year": 1968,
+        "small_n": 74,
+        "small_medal_n": 13,
+        "small_medal": 32,
+        "small_athletes": 1186,
+        "big_n": 38,
+        "big_medal_n": 31,
+        "big_medal": 495,
+        "small_medal_rate": 0.1757,
+        "big_medal_rate": 0.8158,
+        "rate_gap_small_minus_big": -0.6401,
+        "total_noc": 112,
+        "small_share_of_noc": 0.6607,
+        "small_medal_share": 0.0607
+      },
+      {
+        "Year": 1972,
+        "small_n": 81,
+        "small_medal_n": 12,
+        "small_medal": 14,
+        "small_athletes": 1351,
+        "big_n": 40,
+        "big_medal_n": 36,
+        "big_medal": 586,
+        "small_medal_rate": 0.1481,
+        "big_medal_rate": 0.9,
+        "rate_gap_small_minus_big": -0.7519,
+        "total_noc": 121,
+        "small_share_of_noc": 0.6694,
+        "small_medal_share": 0.0233
+      },
+      {
+        "Year": 1976,
+        "small_n": 56,
+        "small_medal_n": 7,
+        "small_medal": 10,
+        "small_athletes": 968,
+        "big_n": 36,
+        "big_medal_n": 34,
+        "big_medal": 603,
+        "small_medal_rate": 0.125,
+        "big_medal_rate": 0.9444,
+        "rate_gap_small_minus_big": -0.8194,
+        "total_noc": 92,
+        "small_share_of_noc": 0.6087,
+        "small_medal_share": 0.0163
+      },
+      {
+        "Year": 1980,
+        "small_n": 48,
+        "small_medal_n": 8,
+        "small_medal": 16,
+        "small_athletes": 968,
+        "big_n": 32,
+        "big_medal_n": 28,
+        "big_medal": 615,
+        "small_medal_rate": 0.1667,
+        "big_medal_rate": 0.875,
+        "rate_gap_small_minus_big": -0.7083,
+        "total_noc": 80,
+        "small_share_of_noc": 0.6,
+        "small_medal_share": 0.0254
+      },
+      {
+        "Year": 1984,
+        "small_n": 100,
+        "small_medal_n": 14,
+        "small_medal": 21,
+        "small_athletes": 1656,
+        "big_n": 40,
+        "big_medal_n": 33,
+        "big_medal": 664,
+        "small_medal_rate": 0.14,
+        "big_medal_rate": 0.825,
+        "rate_gap_small_minus_big": -0.685,
+        "total_noc": 140,
+        "small_share_of_noc": 0.7143,
+        "small_medal_share": 0.0307
+      },
+      {
+        "Year": 1988,
+        "small_n": 116,
+        "small_medal_n": 16,
+        "small_medal": 19,
+        "small_athletes": 1955,
+        "big_n": 43,
+        "big_medal_n": 36,
+        "big_medal": 719,
+        "small_medal_rate": 0.1379,
+        "big_medal_rate": 0.8372,
+        "rate_gap_small_minus_big": -0.6993,
+        "total_noc": 159,
+        "small_share_of_noc": 0.7296,
+        "small_medal_share": 0.0257
+      },
+      {
+        "Year": 1992,
+        "small_n": 121,
+        "small_medal_n": 20,
+        "small_medal": 36,
+        "small_athletes": 2072,
+        "big_n": 48,
+        "big_medal_n": 44,
+        "big_medal": 777,
+        "small_medal_rate": 0.1653,
+        "big_medal_rate": 0.9167,
+        "rate_gap_small_minus_big": -0.7514,
+        "total_noc": 169,
+        "small_share_of_noc": 0.716,
+        "small_medal_share": 0.0443
+      },
+      {
+        "Year": 1996,
+        "small_n": 141,
+        "small_medal_n": 27,
+        "small_medal": 48,
+        "small_athletes": 1886,
+        "big_n": 56,
+        "big_medal_n": 52,
+        "big_medal": 793,
+        "small_medal_rate": 0.1915,
+        "big_medal_rate": 0.9286,
+        "rate_gap_small_minus_big": -0.7371,
+        "total_noc": 197,
+        "small_share_of_noc": 0.7157,
+        "small_medal_share": 0.0571
+      },
+      {
+        "Year": 2000,
+        "small_n": 139,
+        "small_medal_n": 22,
+        "small_medal": 50,
+        "small_athletes": 1586,
+        "big_n": 61,
+        "big_medal_n": 58,
+        "big_medal": 875,
+        "small_medal_rate": 0.1583,
+        "big_medal_rate": 0.9508,
+        "rate_gap_small_minus_big": -0.7925,
+        "total_noc": 200,
+        "small_share_of_noc": 0.695,
+        "small_medal_share": 0.0541
+      },
+      {
+        "Year": 2004,
+        "small_n": 144,
+        "small_medal_n": 21,
+        "small_medal": 59,
+        "small_athletes": 1644,
+        "big_n": 57,
+        "big_medal_n": 53,
+        "big_medal": 868,
+        "small_medal_rate": 0.1458,
+        "big_medal_rate": 0.9298,
+        "rate_gap_small_minus_big": -0.784,
+        "total_noc": 201,
+        "small_share_of_noc": 0.7164,
+        "small_medal_share": 0.0636
+      },
+      {
+        "Year": 2008,
+        "small_n": 146,
+        "small_medal_n": 28,
+        "small_medal": 80,
+        "small_athletes": 1666,
+        "big_n": 58,
+        "big_medal_n": 58,
+        "big_medal": 877,
+        "small_medal_rate": 0.1918,
+        "big_medal_rate": 1.0,
+        "rate_gap_small_minus_big": -0.8082,
+        "total_noc": 204,
+        "small_share_of_noc": 0.7157,
+        "small_medal_share": 0.0836
+      },
+      {
+        "Year": 2012,
+        "small_n": 146,
+        "small_medal_n": 29,
+        "small_medal": 61,
+        "small_athletes": 1714,
+        "big_n": 59,
+        "big_medal_n": 56,
+        "big_medal": 901,
+        "small_medal_rate": 0.1986,
+        "big_medal_rate": 0.9492,
+        "rate_gap_small_minus_big": -0.7506,
+        "total_noc": 205,
+        "small_share_of_noc": 0.7122,
+        "small_medal_share": 0.0634
+      },
+      {
+        "Year": 2016,
+        "small_n": 147,
+        "small_medal_n": 26,
+        "small_medal": 60,
+        "small_athletes": 1887,
+        "big_n": 60,
+        "big_medal_n": 60,
+        "big_medal": 913,
+        "small_medal_rate": 0.1769,
+        "big_medal_rate": 1.0,
+        "rate_gap_small_minus_big": -0.8231,
+        "total_noc": 207,
+        "small_share_of_noc": 0.7101,
+        "small_medal_share": 0.0617
+      },
+      {
+        "Year": 2020,
+        "small_n": 146,
+        "small_medal_n": 34,
+        "small_medal": 75,
+        "small_athletes": 1782,
+        "big_n": 60,
+        "big_medal_n": 59,
+        "big_medal": 991,
+        "small_medal_rate": 0.2329,
+        "big_medal_rate": 0.9833,
+        "rate_gap_small_minus_big": -0.7504,
+        "total_noc": 206,
+        "small_share_of_noc": 0.7087,
+        "small_medal_share": 0.0704
+      },
+      {
+        "Year": 2024,
+        "small_n": 150,
+        "small_medal_n": 38,
+        "small_medal": 108,
+        "small_athletes": 1887,
+        "big_n": 56,
+        "big_medal_n": 54,
+        "big_medal": 899,
+        "small_medal_rate": 0.2533,
+        "big_medal_rate": 0.9643,
+        "rate_gap_small_minus_big": -0.711,
+        "total_noc": 206,
+        "small_share_of_noc": 0.7282,
+        "small_medal_share": 0.1072
+      }
+    ],
+    "medal_rate_by_size_class": [
+      {
+        "size_class": "中型(51-150)",
+        "n": 557,
+        "n_with_medal": 479,
+        "total_medal": 2546,
+        "medal_rate": 0.86,
+        "n_modern": 348,
+        "n_with_medal_modern": 309,
+        "total_medal_modern": 1494,
+        "medal_rate_modern": 0.8879
+      },
+      {
+        "size_class": "大型(>150)",
+        "n": 505,
+        "n_with_medal": 504,
+        "total_medal": 14276,
+        "medal_rate": 0.998,
+        "n_modern": 282,
+        "n_with_medal_modern": 282,
+        "total_medal_modern": 8398,
+        "medal_rate_modern": 1.0
+      },
+      {
+        "size_class": "小型(11-50)",
+        "n": 949,
+        "n_with_medal": 366,
+        "total_medal": 933,
+        "medal_rate": 0.3857,
+        "n_modern": 621,
+        "n_with_medal_modern": 235,
+        "total_medal_modern": 575,
+        "medal_rate_modern": 0.3784
+      },
+      {
+        "size_class": "微型(≤10)",
+        "n": 1190,
+        "n_with_medal": 93,
+        "total_medal": 146,
+        "medal_rate": 0.0782,
+        "n_modern": 923,
+        "n_with_medal_modern": 48,
+        "total_medal_modern": 58,
+        "medal_rate_modern": 0.052
+      }
+    ],
+    "tiny_teams_with_medal": {
+      "definition": "参赛人数 ≤ 5 且当届有小项口径奖牌",
+      "n_cases": 30,
+      "n_noc": 27,
+      "n_editions_athletes_le5": 679,
+      "rate": 0.0442,
+      "top_examples": [
+        {
+          "Year": 1896,
+          "NOC": "AUS",
+          "Team": "Australia",
+          "athletes": 5,
+          "Total_event": 3,
+          "Gold_event": 2,
+          "top_sport": "Athletics"
+        },
+        {
+          "Year": 1900,
+          "NOC": "CUB",
+          "Team": "Cuba",
+          "athletes": 2,
+          "Total_event": 2,
+          "Gold_event": 1,
+          "top_sport": "Fencing"
+        },
+        {
+          "Year": 1900,
+          "NOC": "IND",
+          "Team": "India",
+          "athletes": 5,
+          "Total_event": 2,
+          "Gold_event": 0,
+          "top_sport": "Athletics"
+        },
+        {
+          "Year": 1952,
+          "NOC": "TTO",
+          "Team": "Trinidad and Tobago",
+          "athletes": 2,
+          "Total_event": 2,
+          "Gold_event": 0,
+          "top_sport": "Weightlifting"
+        },
+        {
+          "Year": 1948,
+          "NOC": "PAN",
+          "Team": "Panama",
+          "athletes": 2,
+          "Total_event": 2,
+          "Gold_event": 0,
+          "top_sport": "Athletics"
+        },
+        {
+          "Year": 1904,
+          "NOC": "FRA",
+          "Team": "France",
+          "athletes": 2,
+          "Total_event": 2,
+          "Gold_event": 0,
+          "top_sport": "Athletics"
+        },
+        {
+          "Year": 2024,
+          "NOC": "LCA",
+          "Team": "Saint Lucia",
+          "athletes": 5,
+          "Total_event": 2,
+          "Gold_event": 1,
+          "top_sport": "Athletics"
+        },
+        {
+          "Year": 1900,
+          "NOC": "LUX",
+          "Team": "Luxembourg",
+          "athletes": 1,
+          "Total_event": 1,
+          "Gold_event": 1,
+          "top_sport": "Athletics"
+        },
+        {
+          "Year": 1900,
+          "NOC": "COL",
+          "Team": "Colombia",
+          "athletes": 1,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "top_sport": "Tug-Of-War"
+        },
+        {
+          "Year": 1900,
+          "NOC": "HAI",
+          "Team": "Haiti",
+          "athletes": 4,
+          "Total_event": 1,
+          "Gold_event": 1,
+          "top_sport": "Rugby"
+        }
+      ]
+    },
+    "solo_teams_le2_athletes": {
+      "n_cases": 9,
+      "n_editions": 198,
+      "rate": 0.0455,
+      "examples": [
+        {
+          "Year": 1900,
+          "NOC": "CUB",
+          "Team": "Cuba",
+          "athletes": 2,
+          "Total_event": 2
+        },
+        {
+          "Year": 1952,
+          "NOC": "TTO",
+          "Team": "Trinidad and Tobago",
+          "athletes": 2,
+          "Total_event": 2
+        },
+        {
+          "Year": 1904,
+          "NOC": "FRA",
+          "Team": "France",
+          "athletes": 2,
+          "Total_event": 2
+        },
+        {
+          "Year": 1948,
+          "NOC": "PAN",
+          "Team": "Panama",
+          "athletes": 2,
+          "Total_event": 2
+        },
+        {
+          "Year": 1900,
+          "NOC": "COL",
+          "Team": "Colombia",
+          "athletes": 1,
+          "Total_event": 1
+        },
+        {
+          "Year": 1900,
+          "NOC": "NZL",
+          "Team": "New Zealand",
+          "athletes": 1,
+          "Total_event": 1
+        },
+        {
+          "Year": 1900,
+          "NOC": "LUX",
+          "Team": "Luxembourg",
+          "athletes": 1,
+          "Total_event": 1
+        },
+        {
+          "Year": 1956,
+          "NOC": "ISL",
+          "Team": "Iceland",
+          "athletes": 2,
+          "Total_event": 1
+        }
+      ]
+    },
+    "small_medal_rate_trend": {
+      "series_1980_2024": {
+        "1980": 0.1667,
+        "1984": 0.14,
+        "1988": 0.1379,
+        "1992": 0.1653,
+        "1996": 0.1915,
+        "2000": 0.1583,
+        "2004": 0.1458,
+        "2008": 0.1918,
+        "2012": 0.1986,
+        "2016": 0.1769,
+        "2020": 0.2329,
+        "2024": 0.2533
+      },
+      "n_years": 12,
+      "value_1980": 0.1667,
+      "value_2024": 0.2533,
+      "change_1980_2024_pct_points": 8.66,
+      "modern_ols": {
+        "slope": 0.0019375874125874132,
+        "intercept": -3.6991333333333345,
+        "r2": 0.6047306101893257,
+        "p": 0.0029065729043042136,
+        "n": 12
+      },
+      "modern_slope_pct_points_per_year": 0.1938,
+      "all_years_ols": {
+        "slope": -0.0041152366863905325,
+        "intercept": 8.388267869822485,
+        "r2": 0.6665782397378787,
+        "p": 3.7800163424467913e-08,
+        "n": 30
+      },
+      "all_years_slope_pct_points_per_year": -0.4115,
+      "min_year_in_series": 1988,
+      "min_value": 0.1379,
+      "max_year_in_series": 2024,
+      "max_value": 0.2533
+    }
+  },
+  "B_strategy": {
+    "strategy_by_size_all_years": [
+      {
+        "size_class": "中型(51-150)",
+        "n_editions_with_medal": 479,
+        "mpa_median": 0.0448,
+        "mpa_mean": 0.0584,
+        "mpa_p90": 0.1122,
+        "top1_share_median": 0.5,
+        "n_sports_medal_median": 3.0,
+        "hhi_median": 0.5,
+        "total_event_median": 4.0,
+        "athletes_median": 88.0
+      },
+      {
+        "size_class": "大型(>150)",
+        "n_editions_with_medal": 504,
+        "mpa_median": 0.0647,
+        "mpa_mean": 0.0738,
+        "mpa_p90": 0.1402,
+        "top1_share_median": 0.2857,
+        "n_sports_medal_median": 8.0,
+        "hhi_median": 0.18,
+        "total_event_median": 19.0,
+        "athletes_median": 289.5
+      },
+      {
+        "size_class": "小型(11-50)",
+        "n_editions_with_medal": 366,
+        "mpa_median": 0.0625,
+        "mpa_mean": 0.0886,
+        "mpa_p90": 0.1883,
+        "top1_share_median": 1.0,
+        "n_sports_medal_median": 1.0,
+        "hhi_median": 1.0,
+        "total_event_median": 2.0,
+        "athletes_median": 32.0
+      },
+      {
+        "size_class": "微型(≤10)",
+        "n_editions_with_medal": 93,
+        "mpa_median": 0.2,
+        "mpa_mean": 0.304,
+        "mpa_p90": 0.6583,
+        "top1_share_median": 1.0,
+        "n_sports_medal_median": 1.0,
+        "hhi_median": 1.0,
+        "total_event_median": 1.0,
+        "athletes_median": 6.0
+      }
+    ],
+    "strategy_by_size_1980plus": [
+      {
+        "size_class": "中型(51-150)",
+        "n_editions_with_medal": 309,
+        "mpa_median": 0.0455,
+        "mpa_mean": 0.0559,
+        "mpa_p90": 0.1072,
+        "top1_share_median": 0.5,
+        "n_sports_medal_median": 3.0,
+        "hhi_median": 0.5,
+        "total_event_median": 4.0,
+        "athletes_median": 85.0
+      },
+      {
+        "size_class": "大型(>150)",
+        "n_editions_with_medal": 282,
+        "mpa_median": 0.0658,
+        "mpa_mean": 0.0736,
+        "mpa_p90": 0.1367,
+        "top1_share_median": 0.2601,
+        "n_sports_medal_median": 9.0,
+        "hhi_median": 0.163,
+        "total_event_median": 19.5,
+        "athletes_median": 328.5
+      },
+      {
+        "size_class": "小型(11-50)",
+        "n_editions_with_medal": 235,
+        "mpa_median": 0.0606,
+        "mpa_mean": 0.0824,
+        "mpa_p90": 0.1725,
+        "top1_share_median": 1.0,
+        "n_sports_medal_median": 1.0,
+        "hhi_median": 1.0,
+        "total_event_median": 2.0,
+        "athletes_median": 32.0
+      },
+      {
+        "size_class": "微型(≤10)",
+        "n_editions_with_medal": 48,
+        "mpa_median": 0.1667,
+        "mpa_mean": 0.1891,
+        "mpa_p90": 0.275,
+        "top1_share_median": 1.0,
+        "n_sports_medal_median": 1.0,
+        "hhi_median": 1.0,
+        "total_event_median": 1.0,
+        "athletes_median": 7.0
+      }
+    ],
+    "efficiency_vs_size": [
+      {
+        "size_bin": "1-5",
+        "n_noc_editions_in_bin": 30,
+        "n_with_medal": 30,
+        "mpa_median": 0.2917,
+        "mpa_mean": 0.46,
+        "ci95_low": 0.25,
+        "ci95_high": 0.45,
+        "ci_method": "bootstrap percentile on median, B=2000, seed=42"
+      },
+      {
+        "size_bin": "6-10",
+        "n_noc_editions_in_bin": 63,
+        "n_with_medal": 63,
+        "mpa_median": 0.1667,
+        "mpa_mean": 0.2297,
+        "ci95_low": 0.1429,
+        "ci95_high": 0.2,
+        "ci_method": "bootstrap percentile on median, B=2000, seed=42"
+      },
+      {
+        "size_bin": "11-25",
+        "n_noc_editions_in_bin": 108,
+        "n_with_medal": 108,
+        "mpa_median": 0.0833,
+        "mpa_mean": 0.12,
+        "ci95_low": 0.0718,
+        "ci95_high": 0.0909,
+        "ci_method": "bootstrap percentile on median, B=2000, seed=42"
+      },
+      {
+        "size_bin": "26-50",
+        "n_noc_editions_in_bin": 258,
+        "n_with_medal": 258,
+        "mpa_median": 0.0526,
+        "mpa_mean": 0.0755,
+        "ci95_low": 0.043,
+        "ci95_high": 0.0572,
+        "ci_method": "bootstrap percentile on median, B=2000, seed=42"
+      },
+      {
+        "size_bin": "51-100",
+        "n_noc_editions_in_bin": 292,
+        "n_with_medal": 292,
+        "mpa_median": 0.0467,
+        "mpa_mean": 0.0608,
+        "ci95_low": 0.0415,
+        "ci95_high": 0.0534,
+        "ci_method": "bootstrap percentile on median, B=2000, seed=42"
+      },
+      {
+        "size_bin": "101-200",
+        "n_noc_editions_in_bin": 301,
+        "n_with_medal": 301,
+        "mpa_median": 0.0417,
+        "mpa_mean": 0.0543,
+        "ci95_low": 0.0385,
+        "ci95_high": 0.0476,
+        "ci_method": "bootstrap percentile on median, B=2000, seed=42"
+      },
+      {
+        "size_bin": "201+",
+        "n_noc_editions_in_bin": 390,
+        "n_with_medal": 390,
+        "mpa_median": 0.0712,
+        "mpa_mean": 0.0797,
+        "ci95_low": 0.0658,
+        "ci95_high": 0.0739,
+        "ci_method": "bootstrap percentile on median, B=2000, seed=42"
+      }
+    ],
+    "scatter_coverage_check": {
+      "n_rows": 1442,
+      "named_cases_missing": [],
+      "named_case_rows": 22,
+      "big_reference_present": [
+        "AUS",
+        "CHN",
+        "FRA",
+        "GBR",
+        "GER",
+        "ITA",
+        "JPN",
+        "RUS",
+        "URS",
+        "USA"
+      ]
+    },
+    "spearman": {
+      "athletes_vs_top1_share_1980plus": {
+        "label": "1980+ 有奖牌：参赛人数 vs top1_share",
+        "test": "Spearman rank correlation",
+        "n": 874,
+        "rho": -0.7902996550435312,
+        "p": 1.0624583390004866e-187,
+        "note": "强负相关，显著(α=0.05)"
+      },
+      "athletes_vs_n_sports_medal_1980plus": {
+        "label": "1980+ 有奖牌：参赛人数 vs 夺牌大类数",
+        "test": "Spearman rank correlation",
+        "n": 874,
+        "rho": 0.8583597966063173,
+        "p": 5.696868902977267e-255,
+        "note": "强正相关，显著(α=0.05)"
+      },
+      "athletes_vs_hhi_1980plus": {
+        "label": "1980+ 有奖牌：参赛人数 vs HHI",
+        "test": "Spearman rank correlation",
+        "n": 874,
+        "rho": -0.8379434448957149,
+        "p": 1.4845180341041797e-231,
+        "note": "强负相关，显著(α=0.05)"
+      },
+      "athletes_vs_medal_per_athlete_1980plus": {
+        "label": "1980+ 有奖牌：参赛人数 vs medal_per_athlete",
+        "test": "Spearman rank correlation",
+        "n": 874,
+        "rho": -0.10956951075077953,
+        "p": 0.001177007058929801,
+        "note": "弱负相关，显著(α=0.05)"
+      },
+      "athletes_vs_total_event_1980plus": {
+        "label": "1980+ 有奖牌：参赛人数 vs 奖牌数",
+        "test": "Spearman rank correlation",
+        "n": 874,
+        "rho": 0.8243412133647002,
+        "p": 1.0802630861348721e-217,
+        "note": "强正相关，显著(α=0.05)"
+      },
+      "athletes_vs_top1_share_all_years": {
+        "label": "全期有奖牌：参赛人数 vs top1_share",
+        "test": "Spearman rank correlation",
+        "n": 1442,
+        "rho": -0.7524738305476679,
+        "p": 1.915484157875996e-263,
+        "note": "强负相关，显著(α=0.05)"
+      },
+      "athletes_vs_n_sports_medal_all_years": {
+        "label": "全期有奖牌：参赛人数 vs 夺牌大类数",
+        "test": "Spearman rank correlation",
+        "n": 1442,
+        "rho": 0.8274617466305562,
+        "p": 0.0,
+        "note": "强正相关，显著(α=0.05)"
+      }
+    },
+    "group_compare_small50_vs_big150": {
+      "sample": "Year>=1980 且 has_medal_event==1",
+      "n_small_le50": 283,
+      "n_big_gt150": 282,
+      "note": "第一组=小团(≤50)，第二组=大团(>150)；effect_r>0 表示小团取值更大",
+      "results": {
+        "top1_share": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 283,
+          "n2": 282,
+          "U": 77735.0,
+          "p": 4.976161059027448e-89,
+          "effect_r": 0.9480991404155077,
+          "median1": 1.0,
+          "median2": 0.26006441223832527,
+          "direction": "小团更高"
+        },
+        "n_sports_medal": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 283,
+          "n2": 282,
+          "U": 820.0,
+          "p": 5.871814844457915e-95,
+          "effect_r": -0.9794501666541363,
+          "median1": 1.0,
+          "median2": 9.0,
+          "direction": "大团更高"
+        },
+        "medal_per_athlete": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 283,
+          "n2": 282,
+          "U": 45100.5,
+          "p": 0.007389872574380012,
+          "effect_r": 0.13025336440869117,
+          "median1": 0.07317073170731707,
+          "median2": 0.06584047327621378,
+          "direction": "小团更高"
+        },
+        "hhi": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 283,
+          "n2": 282,
+          "U": 78753.5,
+          "p": 1.0018872165407984e-93,
+          "effect_r": 0.9736235370774127,
+          "median1": 1.0,
+          "median2": 0.16303233041627926,
+          "direction": "小团更高"
+        },
+        "Total_event": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 283,
+          "n2": 282,
+          "U": 1606.5,
+          "p": 2.5484161987309767e-88,
+          "effect_r": -0.9597398691827682,
+          "median1": 1.0,
+          "median2": 19.5,
+          "direction": "大团更高"
+        }
+      }
+    },
+    "single_sport_dependence": {
+      "n_small": 283,
+      "n_big": 282,
+      "small_le50_share_top1_eq_1": 0.7244,
+      "big_gt150_share_top1_eq_1": 0.0071,
+      "all_modern_share_top1_eq_1": 0.3238
+    }
+  },
+  "C_cases": {
+    "selected_cases": {
+      "named": [
+        "HKG",
+        "SGP",
+        "TPE"
+      ],
+      "extra": [
+        "GEO",
+        "ARM",
+        "GRN",
+        "MGL",
+        "KOS"
+      ],
+      "rule": "候选池内 历史小项口径奖牌/峰值参赛人数 降序取5"
+    },
+    "case_countries": [
+      {
+        "NOC": "HKG",
+        "Team": "Hong Kong",
+        "first_olympic_year": 1952,
+        "first_medal_year": 1996,
+        "first_gold_year": 1996,
+        "n_appearances": 18,
+        "n_medal_editions": 5,
+        "medal_edition_rate": 0.2778,
+        "total_medal_event": 13,
+        "total_gold_event": 4,
+        "max_medal_single_edition": 6,
+        "max_athletes_single_edition": 91,
+        "median_athletes": 47.0,
+        "top3_sports_with_medals": "Swimming:4; Fencing:3; Cycling:2; Table Tennis:2",
+        "n_medal_sports_total": 6,
+        "has_ever_been_small_le50": 1
+      },
+      {
+        "NOC": "SGP",
+        "Team": "Singapore",
+        "first_olympic_year": 1948,
+        "first_medal_year": 1960,
+        "first_gold_year": 2016,
+        "n_appearances": 18,
+        "n_medal_editions": 5,
+        "medal_edition_rate": 0.2778,
+        "total_medal_event": 6,
+        "total_gold_event": 1,
+        "max_medal_single_edition": 2,
+        "max_athletes_single_edition": 52,
+        "median_athletes": 25.0,
+        "top3_sports_with_medals": "Table Tennis:3; Sailing:1; Swimming:1; Weightlifting:1",
+        "n_medal_sports_total": 4,
+        "has_ever_been_small_le50": 1
+      },
+      {
+        "NOC": "TPE",
+        "Team": "Chinese Taipei-1",
+        "first_olympic_year": 1956,
+        "first_medal_year": 1960,
+        "first_gold_year": 2004,
+        "n_appearances": 16,
+        "n_medal_editions": 12,
+        "medal_edition_rate": 0.75,
+        "total_medal_event": 43,
+        "total_gold_event": 7,
+        "max_medal_single_edition": 12,
+        "max_athletes_single_edition": 123,
+        "median_athletes": 76.5,
+        "top3_sports_with_medals": "Weightlifting:11; Taekwondo:9; Archery:4; Boxing:4",
+        "n_medal_sports_total": 13,
+        "has_ever_been_small_le50": 1
+      },
+      {
+        "NOC": "GEO",
+        "Team": "Georgia",
+        "first_olympic_year": 1996,
+        "first_medal_year": 1996,
+        "first_gold_year": 2004,
+        "n_appearances": 8,
+        "n_medal_editions": 8,
+        "medal_edition_rate": 1.0,
+        "total_medal_event": 47,
+        "total_gold_event": 13,
+        "max_medal_single_edition": 8,
+        "max_athletes_single_edition": 47,
+        "median_athletes": 38.5,
+        "top3_sports_with_medals": "Wrestling:22; Judo:15; Weightlifting:7",
+        "n_medal_sports_total": 5,
+        "has_ever_been_small_le50": 1
+      },
+      {
+        "NOC": "ARM",
+        "Team": "Armenia",
+        "first_olympic_year": 1996,
+        "first_medal_year": 1996,
+        "first_gold_year": 1996,
+        "n_appearances": 8,
+        "n_medal_editions": 7,
+        "medal_edition_rate": 0.875,
+        "total_medal_event": 24,
+        "total_gold_event": 2,
+        "max_medal_single_edition": 6,
+        "max_athletes_single_edition": 38,
+        "median_athletes": 26.0,
+        "top3_sports_with_medals": "Wrestling:11; Weightlifting:9; Boxing:2; Gymnastics:2",
+        "n_medal_sports_total": 4,
+        "has_ever_been_small_le50": 1
+      },
+      {
+        "NOC": "GRN",
+        "Team": "Grenada",
+        "first_olympic_year": 1984,
+        "first_medal_year": 2012,
+        "first_gold_year": 2012,
+        "n_appearances": 11,
+        "n_medal_editions": 4,
+        "medal_edition_rate": 0.3636,
+        "total_medal_event": 5,
+        "total_gold_event": 1,
+        "max_medal_single_edition": 2,
+        "max_athletes_single_edition": 9,
+        "median_athletes": 6.0,
+        "top3_sports_with_medals": "Athletics:5",
+        "n_medal_sports_total": 1,
+        "has_ever_been_small_le50": 1
+      },
+      {
+        "NOC": "MGL",
+        "Team": "Mongolia",
+        "first_olympic_year": 1964,
+        "first_medal_year": 1968,
+        "first_gold_year": 2008,
+        "n_appearances": 15,
+        "n_medal_editions": 13,
+        "medal_edition_rate": 0.8667,
+        "total_medal_event": 31,
+        "total_gold_event": 2,
+        "max_medal_single_edition": 5,
+        "max_athletes_single_edition": 61,
+        "median_athletes": 38.0,
+        "top3_sports_with_medals": "Judo:12; Wrestling:10; Boxing:7",
+        "n_medal_sports_total": 4,
+        "has_ever_been_small_le50": 1
+      },
+      {
+        "NOC": "KOS",
+        "Team": "Kosovo",
+        "first_olympic_year": 2016,
+        "first_medal_year": 2016,
+        "first_gold_year": 2016,
+        "n_appearances": 3,
+        "n_medal_editions": 3,
+        "medal_edition_rate": 1.0,
+        "total_medal_event": 5,
+        "total_gold_event": 3,
+        "max_medal_single_edition": 2,
+        "max_athletes_single_edition": 11,
+        "median_athletes": 9.0,
+        "top3_sports_with_medals": "Judo:5",
+        "n_medal_sports_total": 1,
+        "has_ever_been_small_le50": 1
+      }
+    ],
+    "hkg_detail_summary": {
+      "n_appearances": 18,
+      "n_medal_editions": 5,
+      "total_medal_event": 13,
+      "total_gold_event": 4,
+      "max_athletes": 91,
+      "median_athletes": 47.0,
+      "editions_with_medal": [
+        {
+          "Year": 1996,
+          "athletes": 32,
+          "Total_event": 1,
+          "Gold_event": 1,
+          "medal_sport_list": "Sailing"
+        },
+        {
+          "Year": 2004,
+          "athletes": 42,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Table Tennis"
+        },
+        {
+          "Year": 2012,
+          "athletes": 55,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Cycling"
+        },
+        {
+          "Year": 2020,
+          "athletes": 65,
+          "Total_event": 6,
+          "Gold_event": 1,
+          "medal_sport_list": "Cycling; Fencing; Karate; Swimming; Table Tennis"
+        },
+        {
+          "Year": 2024,
+          "athletes": 51,
+          "Total_event": 4,
+          "Gold_event": 2,
+          "medal_sport_list": "Fencing; Swimming"
+        }
+      ]
+    },
+    "sgp_detail_summary": {
+      "n_appearances": 18,
+      "n_medal_editions": 5,
+      "total_medal_event": 6,
+      "total_gold_event": 1,
+      "max_athletes": 52,
+      "median_athletes": 25.0,
+      "editions_with_medal": [
+        {
+          "Year": 1960,
+          "athletes": 5,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Weightlifting"
+        },
+        {
+          "Year": 2008,
+          "athletes": 36,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Table Tennis"
+        },
+        {
+          "Year": 2012,
+          "athletes": 36,
+          "Total_event": 2,
+          "Gold_event": 0,
+          "medal_sport_list": "Table Tennis"
+        },
+        {
+          "Year": 2016,
+          "athletes": 32,
+          "Total_event": 1,
+          "Gold_event": 1,
+          "medal_sport_list": "Swimming"
+        },
+        {
+          "Year": 2024,
+          "athletes": 32,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Sailing"
+        }
+      ]
+    },
+    "tpe_detail_summary": {
+      "n_appearances": 16,
+      "n_medal_editions": 12,
+      "total_medal_event": 43,
+      "total_gold_event": 7,
+      "max_athletes": 123,
+      "median_athletes": 76.5,
+      "editions_with_medal": [
+        {
+          "Year": 1960,
+          "athletes": 31,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Athletics"
+        },
+        {
+          "Year": 1968,
+          "athletes": 93,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Athletics"
+        },
+        {
+          "Year": 1984,
+          "athletes": 52,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Weightlifting"
+        },
+        {
+          "Year": 1992,
+          "athletes": 38,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Baseball"
+        },
+        {
+          "Year": 1996,
+          "athletes": 107,
+          "Total_event": 1,
+          "Gold_event": 0,
+          "medal_sport_list": "Table Tennis"
+        },
+        {
+          "Year": 2000,
+          "athletes": 75,
+          "Total_event": 5,
+          "Gold_event": 0,
+          "medal_sport_list": "Table Tennis; Taekwondo; Weightlifting"
+        },
+        {
+          "Year": 2004,
+          "athletes": 104,
+          "Total_event": 5,
+          "Gold_event": 2,
+          "medal_sport_list": "Archery; Taekwondo"
+        },
+        {
+          "Year": 2008,
+          "athletes": 92,
+          "Total_event": 4,
+          "Gold_event": 0,
+          "medal_sport_list": "Taekwondo; Weightlifting"
+        },
+        {
+          "Year": 2012,
+          "athletes": 55,
+          "Total_event": 2,
+          "Gold_event": 0,
+          "medal_sport_list": "Taekwondo; Weightlifting"
+        },
+        {
+          "Year": 2016,
+          "athletes": 67,
+          "Total_event": 3,
+          "Gold_event": 1,
+          "medal_sport_list": "Archery; Weightlifting"
+        },
+        {
+          "Year": 2020,
+          "athletes": 117,
+          "Total_event": 12,
+          "Gold_event": 2,
+          "medal_sport_list": "Archery; Badminton; Boxing; Golf; Gymnastics; Judo; Karate; Table Tennis; Taekwondo; Weightlifting"
+        },
+        {
+          "Year": 2024,
+          "athletes": 78,
+          "Total_event": 7,
+          "Gold_event": 2,
+          "medal_sport_list": "Badminton; Boxing; Gymnastics; Shooting; Weightlifting"
+        }
+      ]
+    }
+  },
+  "D_persistence": {
+    "persistence_overview": {
+      "n_noc_ever_medal": 157,
+      "median_post_first_medal_rate": 0.7241,
+      "mean_post_first_medal_rate": 0.6041,
+      "median_max_streak": 4.0,
+      "share_never_medal_again": 0.1911,
+      "n_never_medal_again": 30,
+      "share_post_rate_ge_0_5": 0.5796,
+      "median_gap_first_to_second": 4.0
+    },
+    "persistence_by_team_type": [
+      {
+        "team_type": "大团型(峰值>50)",
+        "n_noc": 94,
+        "post_rate_median": 0.9259,
+        "post_rate_mean": 0.7956,
+        "post_rate_p25": 0.6215,
+        "post_rate_p75": 1.0,
+        "max_streak_median": 8.5,
+        "n_medal_editions_median": 11.0,
+        "total_medal_median": 59.0
+      },
+      {
+        "team_type": "小团型(峰值≤50)",
+        "n_noc": 63,
+        "post_rate_median": 0.1548,
+        "post_rate_mean": 0.2931,
+        "post_rate_p25": 0.0,
+        "post_rate_p75": 0.4711,
+        "max_streak_median": 1.0,
+        "n_medal_editions_median": 2.0,
+        "total_medal_median": 2.0
+      }
+    ],
+    "mwu_small_type_vs_big_type": {
+      "group_def": "小团型=max_athletes<=50；大团型=max_athletes>50",
+      "n_small_type": 63,
+      "n_big_type": 94,
+      "note": "第一组=小团型，第二组=大团型；effect_r>0 表示小团型更大",
+      "results": {
+        "post_first_medal_rate": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 56,
+          "n2": 91,
+          "U": 769.5,
+          "p": 6.077404904747615e-13,
+          "effect_r": -0.6979984301412873,
+          "median1": 0.1548,
+          "median2": 0.9259,
+          "direction": "大团更高"
+        },
+        "max_streak": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 63,
+          "n2": 94,
+          "U": 630.0,
+          "p": 2.5758088544430038e-17,
+          "effect_r": -0.7872340425531915,
+          "median1": 1.0,
+          "median2": 8.5,
+          "direction": "大团更高"
+        },
+        "n_medal_editions": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 63,
+          "n2": 94,
+          "U": 570.5,
+          "p": 7.92490411139049e-18,
+          "effect_r": -0.8073286052009456,
+          "median1": 2.0,
+          "median2": 11.0,
+          "direction": "大团更高"
+        },
+        "n_appear": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 63,
+          "n2": 94,
+          "U": 1697.5,
+          "p": 5.878231994434494e-06,
+          "effect_r": -0.42671394799054374,
+          "median1": 12.0,
+          "median2": 18.0,
+          "direction": "大团更高"
+        },
+        "total_medal_event": {
+          "test": "Mann-Whitney U (two-sided, method=auto)",
+          "n1": 63,
+          "n2": 94,
+          "U": 386.5,
+          "p": 2.5649160820943906e-20,
+          "effect_r": -0.8694697737250929,
+          "median1": 2.0,
+          "median2": 59.0,
+          "direction": "大团更高"
+        }
+      }
+    },
+    "one_hit_wonders": {
+      "definition": "n_medal_editions == 1（仅在一届拿到小项口径奖牌）",
+      "n_one_hit": 30,
+      "n_noc_ever_medal": 157,
+      "share_of_medal_nations": 0.1911,
+      "mean_max_athletes": 65.63,
+      "median_max_athletes": 24.5,
+      "mean_total_medal_event": 7.3,
+      "median_total_medal_event": 1.0,
+      "share_max_athletes_le50": 0.8667,
+      "multi_mean_max_athletes": 201.94,
+      "multi_mean_total_medal": 139.23,
+      "share_noc_le50_among_all_medal": 0.4013,
+      "examples_top8": [
+        {
+          "NOC": "EUN",
+          "Team": "Unified Team",
+          "first_medal_year": 1992,
+          "n_appear": 1,
+          "max_athletes": 650,
+          "median_athletes": 650.0,
+          "total_medal_event": 112,
+          "team_type": "大团型(峰值>50)"
+        },
+        {
+          "NOC": "ROC",
+          "Team": "Russia",
+          "first_medal_year": 2020,
+          "n_appear": 1,
+          "max_athletes": 561,
+          "median_athletes": 561.0,
+          "total_medal_event": 68,
+          "team_type": "大团型(峰值>50)"
+        },
+        {
+          "NOC": "AIN",
+          "Team": "AIN",
+          "first_medal_year": 2024,
+          "n_appear": 1,
+          "max_athletes": 46,
+          "median_athletes": 46.0,
+          "total_medal_event": 5,
+          "team_type": "小团型(峰值≤50)"
+        },
+        {
+          "NOC": "SMR",
+          "Team": "San Marino",
+          "first_medal_year": 2020,
+          "n_appear": 16,
+          "max_athletes": 31,
+          "median_athletes": 7.0,
+          "total_medal_event": 3,
+          "team_type": "小团型(峰值≤50)"
+        },
+        {
+          "NOC": "LCA",
+          "Team": "Saint Lucia",
+          "first_medal_year": 2024,
+          "n_appear": 8,
+          "max_athletes": 8,
+          "median_athletes": 5.0,
+          "total_medal_event": 2,
+          "team_type": "小团型(峰值≤50)"
+        },
+        {
+          "NOC": "ALB",
+          "Team": "Albania",
+          "first_medal_year": 2024,
+          "n_appear": 10,
+          "max_athletes": 12,
+          "median_athletes": 9.0,
+          "total_medal_event": 2,
+          "team_type": "小团型(峰值≤50)"
+        },
+        {
+          "NOC": "WIF",
+          "Team": "Circus",
+          "first_medal_year": 1960,
+          "n_appear": 1,
+          "max_athletes": 20,
+          "median_athletes": 20.0,
+          "total_medal_event": 2,
+          "team_type": "小团型(峰值≤50)"
+        },
+        {
+          "NOC": "TAN",
+          "Team": "Tanzania",
+          "first_medal_year": 1980,
+          "n_appear": 15,
+          "max_athletes": 48,
+          "median_athletes": 7.0,
+          "total_medal_event": 2,
+          "team_type": "小团型(峰值≤50)"
+        }
+      ]
+    },
+    "one_hit_vs_multi_scale_test": {
+      "test": "Mann-Whitney U (two-sided, method=auto)",
+      "n1": 30,
+      "n2": 127,
+      "U": 664.5,
+      "p": 3.081728857615751e-08,
+      "effect_r": -0.6511811023622047,
+      "median1": 24.5,
+      "median2": 89.0,
+      "direction": "大团更高"
+    },
+    "one_hit_modern_cohort": {
+      "n_noc_first_medal_1980plus": 76,
+      "n_one_hit_among_them": 26,
+      "share": 0.3421,
+      "median_max_athletes_one_hit": 24.5
+    }
+  },
+  "E_sensitivity": {
+    "threshold_sensitivity": [
+      {
+        "threshold": 10,
+        "n_small_editions": 1190,
+        "n_big_editions": 2011,
+        "small_medal_rate": 0.0782,
+        "big_medal_rate": 0.6708,
+        "rate_gap": -0.5927,
+        "rate_mwu_p": 0.0,
+        "n_small_with_medal_1980plus": 48,
+        "n_big_with_medal_1980plus": 826,
+        "small_mpa_median": 0.1667,
+        "big_mpa_median": 0.0578,
+        "mpa_mwu_p": 0.0,
+        "mpa_effect_r": 0.8568,
+        "small_top1_share_median": 1.0,
+        "big_top1_share_median": 0.5,
+        "top1_share_mwu_p": 0.0,
+        "top1_share_effect_r": 0.7065,
+        "small_n_sports_median": 1.0,
+        "big_n_sports_median": 3.0,
+        "n_sports_mwu_p": 0.0,
+        "n_sports_effect_r": -0.7052
+      },
+      {
+        "threshold": 25,
+        "n_small_editions": 1685,
+        "n_big_editions": 1516,
+        "small_medal_rate": 0.1193,
+        "big_medal_rate": 0.8186,
+        "rate_gap": -0.6993,
+        "rate_mwu_p": 0.0,
+        "n_small_with_medal_1980plus": 115,
+        "n_big_with_medal_1980plus": 759,
+        "small_mpa_median": 0.125,
+        "big_mpa_median": 0.0566,
+        "mpa_mwu_p": 0.0,
+        "mpa_effect_r": 0.5863,
+        "small_top1_share_median": 1.0,
+        "big_top1_share_median": 0.4324,
+        "top1_share_mwu_p": 0.0,
+        "top1_share_effect_r": 0.6952,
+        "small_n_sports_median": 1.0,
+        "big_n_sports_median": 3.0,
+        "n_sports_mwu_p": 0.0,
+        "n_sports_effect_r": -0.707
+      },
+      {
+        "threshold": 50,
+        "n_small_editions": 2139,
+        "n_big_editions": 1062,
+        "small_medal_rate": 0.2146,
+        "big_medal_rate": 0.9256,
+        "rate_gap": -0.711,
+        "rate_mwu_p": 0.0,
+        "n_small_with_medal_1980plus": 283,
+        "n_big_with_medal_1980plus": 591,
+        "small_mpa_median": 0.0732,
+        "big_mpa_median": 0.0575,
+        "mpa_mwu_p": 0.0,
+        "mpa_effect_r": 0.2583,
+        "small_top1_share_median": 1.0,
+        "big_top1_share_median": 0.3333,
+        "top1_share_mwu_p": 0.0,
+        "top1_share_effect_r": 0.7349,
+        "small_n_sports_median": 1.0,
+        "big_n_sports_median": 5.0,
+        "n_sports_mwu_p": 0.0,
+        "n_sports_effect_r": -0.76
+      },
+      {
+        "threshold": 100,
+        "n_small_editions": 2498,
+        "n_big_editions": 703,
+        "small_medal_rate": 0.3006,
+        "big_medal_rate": 0.9829,
+        "rate_gap": -0.6823,
+        "rate_mwu_p": 0.0,
+        "n_small_with_medal_1980plus": 479,
+        "n_big_with_medal_1980plus": 395,
+        "small_mpa_median": 0.0625,
+        "big_mpa_median": 0.0599,
+        "mpa_mwu_p": 0.046086,
+        "mpa_effect_r": 0.0783,
+        "small_top1_share_median": 1.0,
+        "big_top1_share_median": 0.2857,
+        "top1_share_mwu_p": 0.0,
+        "top1_share_effect_r": 0.8136,
+        "small_n_sports_median": 1.0,
+        "big_n_sports_median": 7.0,
+        "n_sports_mwu_p": 0.0,
+        "n_sports_effect_r": -0.8729
+      },
+      {
+        "threshold": 150,
+        "n_small_editions": 2696,
+        "n_big_editions": 505,
+        "small_medal_rate": 0.3479,
+        "big_medal_rate": 0.998,
+        "rate_gap": -0.6501,
+        "rate_mwu_p": 0.0,
+        "n_small_with_medal_1980plus": 592,
+        "n_big_with_medal_1980plus": 282,
+        "small_mpa_median": 0.0571,
+        "big_mpa_median": 0.0658,
+        "mpa_mwu_p": 0.030542,
+        "mpa_effect_r": -0.0904,
+        "small_top1_share_median": 0.6833,
+        "big_top1_share_median": 0.2601,
+        "top1_share_mwu_p": 0.0,
+        "top1_share_effect_r": 0.8133,
+        "small_n_sports_median": 2.0,
+        "big_n_sports_median": 9.0,
+        "n_sports_mwu_p": 0.0,
+        "n_sports_effect_r": -0.9221
+      }
+    ],
+    "threshold_robustness_verdict": {
+      "n_thresholds": 5,
+      "mpa_sign_consistent": false,
+      "mpa_sign": "方向随阈值翻转",
+      "mpa_n_significant": 5,
+      "top1_share_sign_consistent": true,
+      "top1_share_sign": "小团更高",
+      "top1_share_n_significant": 5,
+      "n_sports_sign_consistent": true,
+      "n_sports_n_significant": 5
+    },
+    "caliber_sensitivity": {
+      "rows": [
+        {
+          "sample": "全期有奖牌",
+          "caliber": "event（小项·主口径）",
+          "n_small_le50": 459,
+          "n_big_gt150": 504,
+          "small_mpa_median": 0.0769,
+          "big_mpa_median": 0.0647,
+          "mwu_p": 0.0,
+          "effect_r": 0.2002,
+          "direction": "小团更高",
+          "total_medal_sum_in_sample": 17901
+        },
+        {
+          "sample": "全期有奖牌",
+          "caliber": "athlete（运动员行·对照）",
+          "n_small_le50": 459,
+          "n_big_gt150": 504,
+          "small_mpa_median": 0.1154,
+          "big_mpa_median": 0.1438,
+          "mwu_p": 0.003041,
+          "effect_r": -0.1105,
+          "direction": "大团更高",
+          "total_medal_sum_in_sample": 38360
+        },
+        {
+          "sample": "1980+有奖牌",
+          "caliber": "event（小项·主口径）",
+          "n_small_le50": 283,
+          "n_big_gt150": 282,
+          "small_mpa_median": 0.0732,
+          "big_mpa_median": 0.0658,
+          "mwu_p": 0.00739,
+          "effect_r": 0.1303,
+          "direction": "小团更高",
+          "total_medal_sum_in_sample": 10525
+        },
+        {
+          "sample": "1980+有奖牌",
+          "caliber": "athlete（运动员行·对照）",
+          "n_small_le50": 283,
+          "n_big_gt150": 282,
+          "small_mpa_median": 0.0938,
+          "big_mpa_median": 0.1455,
+          "mwu_p": 0.0,
+          "effect_r": -0.2912,
+          "direction": "大团更高",
+          "total_medal_sum_in_sample": 22743
+        }
+      ],
+      "anchors": {
+        "event_caliber_total_medals": 17901,
+        "athlete_caliber_total_medals": 38360,
+        "ratio_athlete_to_event": 2.1429
+      },
+      "note": "top1_share / n_sports_medal 按运动大类聚合，与奖牌口径无关，只在 A/B 块列出"
+    },
+    "caliber_verdict": {
+      "same_direction_within_sample": false,
+      "detail": {
+        "全期有奖牌": [
+          "小团更高",
+          "大团更高"
+        ],
+        "1980+有奖牌": [
+          "小团更高",
+          "大团更高"
+        ]
+      }
+    }
+  },
+  "F_trend": {
+    "f_series_1980_2024": [
+      {
+        "Year": 1980,
+        "n_noc": 80,
+        "n_small": 48,
+        "small_share_of_noc": 0.6,
+        "small_medal": 16,
+        "total_medal": 631,
+        "small_medal_share": 0.0254,
+        "n_medal_noc": 36,
+        "n_medal_noc_small": 8,
+        "small_medal_noc_share": 0.2222,
+        "small_athletes": 968,
+        "small_athlete_share": 0.1346,
+        "big_medal_share": 0.9746
+      },
+      {
+        "Year": 1984,
+        "n_noc": 140,
+        "n_small": 100,
+        "small_share_of_noc": 0.7143,
+        "small_medal": 21,
+        "total_medal": 685,
+        "small_medal_share": 0.0307,
+        "n_medal_noc": 47,
+        "n_medal_noc_small": 14,
+        "small_medal_noc_share": 0.2979,
+        "small_athletes": 1656,
+        "small_athlete_share": 0.1752,
+        "big_medal_share": 0.9693
+      },
+      {
+        "Year": 1988,
+        "n_noc": 159,
+        "n_small": 116,
+        "small_share_of_noc": 0.7296,
+        "small_medal": 19,
+        "total_medal": 738,
+        "small_medal_share": 0.0257,
+        "n_medal_noc": 52,
+        "n_medal_noc_small": 16,
+        "small_medal_noc_share": 0.3077,
+        "small_athletes": 1955,
+        "small_athlete_share": 0.1624,
+        "big_medal_share": 0.9743
+      },
+      {
+        "Year": 1992,
+        "n_noc": 169,
+        "n_small": 121,
+        "small_share_of_noc": 0.716,
+        "small_medal": 36,
+        "total_medal": 813,
+        "small_medal_share": 0.0443,
+        "n_medal_noc": 64,
+        "n_medal_noc_small": 20,
+        "small_medal_noc_share": 0.3125,
+        "small_athletes": 2072,
+        "small_athlete_share": 0.1597,
+        "big_medal_share": 0.9557
+      },
+      {
+        "Year": 1996,
+        "n_noc": 197,
+        "n_small": 141,
+        "small_share_of_noc": 0.7157,
+        "small_medal": 48,
+        "total_medal": 841,
+        "small_medal_share": 0.0571,
+        "n_medal_noc": 79,
+        "n_medal_noc_small": 27,
+        "small_medal_noc_share": 0.3418,
+        "small_athletes": 1886,
+        "small_athlete_share": 0.1369,
+        "big_medal_share": 0.9429
+      },
+      {
+        "Year": 2000,
+        "n_noc": 200,
+        "n_small": 139,
+        "small_share_of_noc": 0.695,
+        "small_medal": 50,
+        "total_medal": 925,
+        "small_medal_share": 0.0541,
+        "n_medal_noc": 80,
+        "n_medal_noc_small": 22,
+        "small_medal_noc_share": 0.275,
+        "small_athletes": 1586,
+        "small_athlete_share": 0.1148,
+        "big_medal_share": 0.9459
+      },
+      {
+        "Year": 2004,
+        "n_noc": 201,
+        "n_small": 144,
+        "small_share_of_noc": 0.7164,
+        "small_medal": 59,
+        "total_medal": 927,
+        "small_medal_share": 0.0636,
+        "n_medal_noc": 74,
+        "n_medal_noc_small": 21,
+        "small_medal_noc_share": 0.2838,
+        "small_athletes": 1644,
+        "small_athlete_share": 0.1223,
+        "big_medal_share": 0.9364
+      },
+      {
+        "Year": 2008,
+        "n_noc": 204,
+        "n_small": 146,
+        "small_share_of_noc": 0.7157,
+        "small_medal": 80,
+        "total_medal": 957,
+        "small_medal_share": 0.0836,
+        "n_medal_noc": 86,
+        "n_medal_noc_small": 28,
+        "small_medal_noc_share": 0.3256,
+        "small_athletes": 1666,
+        "small_athlete_share": 0.1225,
+        "big_medal_share": 0.9164
+      },
+      {
+        "Year": 2012,
+        "n_noc": 205,
+        "n_small": 146,
+        "small_share_of_noc": 0.7122,
+        "small_medal": 61,
+        "total_medal": 962,
+        "small_medal_share": 0.0634,
+        "n_medal_noc": 85,
+        "n_medal_noc_small": 29,
+        "small_medal_noc_share": 0.3412,
+        "small_athletes": 1714,
+        "small_athlete_share": 0.1327,
+        "big_medal_share": 0.9366
+      },
+      {
+        "Year": 2016,
+        "n_noc": 207,
+        "n_small": 147,
+        "small_share_of_noc": 0.7101,
+        "small_medal": 60,
+        "total_medal": 973,
+        "small_medal_share": 0.0617,
+        "n_medal_noc": 86,
+        "n_medal_noc_small": 26,
+        "small_medal_noc_share": 0.3023,
+        "small_athletes": 1887,
+        "small_athlete_share": 0.1379,
+        "big_medal_share": 0.9383
+      },
+      {
+        "Year": 2020,
+        "n_noc": 206,
+        "n_small": 146,
+        "small_share_of_noc": 0.7087,
+        "small_medal": 75,
+        "total_medal": 1066,
+        "small_medal_share": 0.0704,
+        "n_medal_noc": 93,
+        "n_medal_noc_small": 34,
+        "small_medal_noc_share": 0.3656,
+        "small_athletes": 1782,
+        "small_athlete_share": 0.1178,
+        "big_medal_share": 0.9296
+      },
+      {
+        "Year": 2024,
+        "n_noc": 206,
+        "n_small": 150,
+        "small_share_of_noc": 0.7282,
+        "small_medal": 108,
+        "total_medal": 1007,
+        "small_medal_share": 0.1072,
+        "n_medal_noc": 92,
+        "n_medal_noc_small": 38,
+        "small_medal_noc_share": 0.413,
+        "small_athletes": 1887,
+        "small_athlete_share": 0.1267,
+        "big_medal_share": 0.8928
+      }
+    ],
+    "trend_1980_2024_ols": {
+      "small_medal_share": {
+        "slope": 0.0014804195804195804,
+        "intercept": -2.9065333333333334,
+        "r2": 0.7893623893959716,
+        "p": 0.00011243389645126573,
+        "n": 12
+      },
+      "small_medal_noc_share": {
+        "slope": 0.0024248251748251745,
+        "intercept": -4.538783333333333,
+        "r2": 0.5301907102941164,
+        "p": 0.007250253008842983,
+        "n": 12
+      },
+      "small_share_of_noc": {
+        "slope": 0.0010714160839160834,
+        "intercept": -1.4398166666666659,
+        "r2": 0.20319165511545767,
+        "p": 0.14137335174218577,
+        "n": 12
+      },
+      "small_athlete_share": {
+        "slope": -0.000826660839160839,
+        "intercept": 1.791933333333333,
+        "r2": 0.3871458615652166,
+        "p": 0.03073388628460625,
+        "n": 12
+      },
+      "n_small": {
+        "slope": 1.6590909090909092,
+        "intercept": -3192.8333333333335,
+        "r2": 0.6469568303221225,
+        "p": 0.0016093921240391965,
+        "n": 12
+      }
+    },
+    "trend_1980_2024_spearman": {
+      "small_medal_share": {
+        "label": "1980-2024 small_medal_share 随年份",
+        "test": "Spearman rank correlation",
+        "n": 12,
+        "rho": 0.9020979020979022,
+        "p": 5.9978574465376914e-05,
+        "note": "强正相关，显著(α=0.05)"
+      },
+      "small_medal_noc_share": {
+        "label": "1980-2024 small_medal_noc_share 随年份",
+        "test": "Spearman rank correlation",
+        "n": 12,
+        "rho": 0.6363636363636365,
+        "p": 0.02609689105270314,
+        "note": "强正相关，显著(α=0.05)"
+      },
+      "small_share_of_noc": {
+        "label": "1980-2024 small_share_of_noc 随年份",
+        "test": "Spearman rank correlation",
+        "n": 12,
+        "rho": 0.05253948512537598,
+        "p": 0.871178309361983,
+        "note": "弱正相关，不显著(α=0.05)"
+      },
+      "small_athlete_share": {
+        "label": "1980-2024 small_athlete_share 随年份",
+        "test": "Spearman rank correlation",
+        "n": 12,
+        "rho": -0.5454545454545455,
+        "p": 0.06661188226688902,
+        "note": "中负相关，不显著(α=0.05)"
+      },
+      "n_small": {
+        "label": "1980-2024 n_small 随年份",
+        "test": "Spearman rank correlation",
+        "n": 12,
+        "rho": 0.9718550849815182,
+        "p": 1.3266867995787976e-07,
+        "note": "强正相关，显著(α=0.05)"
+      }
+    },
+    "trend_verdict": {
+      "small_medal_share_1980": 0.0254,
+      "small_medal_share_2024": 0.1072,
+      "small_medal_share_min": 0.0254,
+      "small_medal_share_min_year": 1980,
+      "small_medal_share_max": 0.1072,
+      "small_medal_share_max_year": 2024,
+      "ols_slope_per_year_pct_points": 0.148,
+      "ols_r2": 0.7893623893959716,
+      "ols_p": 0.00011243389645126573,
+      "spearman_rho": 0.9020979020979022,
+      "spearman_p": 5.9978574465376914e-05,
+      "n_small_1980": 48,
+      "n_small_2024": 150,
+      "n_noc_1980": 80,
+      "n_noc_2024": 206
+    },
+    "share_trend_by_threshold": [
+      {
+        "threshold": 10,
+        "n_editions": 12,
+        "share_first_year": 1980,
+        "share_first": 0.0016,
+        "share_last_year": 2024,
+        "share_last": 0.0109,
+        "share_change": 0.0093,
+        "ols_slope_pp_per_year": 0.0163,
+        "ols_r2": 0.5555,
+        "ols_p": 0.005401950725920272,
+        "spearman_rho": 0.6923,
+        "spearman_p": 0.012593030496094093,
+        "direction": "上升",
+        "significant_05": true
+      },
+      {
+        "threshold": 25,
+        "n_editions": 12,
+        "share_first_year": 1980,
+        "share_first": 0.0048,
+        "share_last_year": 2024,
+        "share_last": 0.0427,
+        "share_change": 0.0379,
+        "ols_slope_pp_per_year": 0.0576,
+        "ols_r2": 0.5697,
+        "ols_p": 0.004545833343052484,
+        "spearman_rho": 0.8462,
+        "spearman_p": 0.0005211337004810075,
+        "direction": "上升",
+        "significant_05": true
+      },
+      {
+        "threshold": 50,
+        "n_editions": 12,
+        "share_first_year": 1980,
+        "share_first": 0.0254,
+        "share_last_year": 2024,
+        "share_last": 0.1072,
+        "share_change": 0.0819,
+        "ols_slope_pp_per_year": 0.1481,
+        "ols_r2": 0.7892,
+        "ols_p": 0.00011286599877764495,
+        "spearman_rho": 0.9021,
+        "spearman_p": 5.997857446537817e-05,
+        "direction": "上升",
+        "significant_05": true
+      },
+      {
+        "threshold": 100,
+        "n_editions": 12,
+        "share_first_year": 1980,
+        "share_first": 0.0634,
+        "share_last_year": 2024,
+        "share_last": 0.1837,
+        "share_change": 0.1203,
+        "ols_slope_pp_per_year": 0.3203,
+        "ols_r2": 0.8806,
+        "ols_p": 6.302137098368632e-06,
+        "spearman_rho": 0.9441,
+        "spearman_p": 3.927261080966041e-06,
+        "direction": "上升",
+        "significant_05": true
+      },
+      {
+        "threshold": 150,
+        "n_editions": 12,
+        "share_first_year": 1980,
+        "share_first": 0.0951,
+        "share_last_year": 2024,
+        "share_last": 0.2632,
+        "share_change": 0.1681,
+        "ols_slope_pp_per_year": 0.4803,
+        "ols_r2": 0.911,
+        "ols_p": 1.4316659796799721e-06,
+        "spearman_rho": 0.958,
+        "spearman_p": 9.543581826838566e-07,
+        "direction": "上升",
+        "significant_05": true
+      }
+    ],
+    "share_trend_verdict": {
+      "n_thresholds": 5,
+      "all_rising": true,
+      "all_significant_05": true,
+      "min_slope_pp": 0.0163,
+      "max_slope_pp": 0.4803,
+      "note": "若所有阈值下方向一致且显著，则第七节结论通过稳健性检验"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+﻿NOC,Team,first_olympic_year,first_medal_year,first_gold_year,n_appearances,n_medal_editions,medal_edition_rate,total_medal_event,total_gold_event,max_medal_single_edition,max_athletes_single_edition,median_athletes,top3_sports_with_medals,n_medal_sports_total,has_ever_been_small_le50
+HKG,Hong Kong,1952,1996,1996,18,5,0.2778,13,4,6,91,47.0,Swimming:4; Fencing:3; Cycling:2; Table Tennis:2,6,1
+SGP,Singapore,1948,1960,2016,18,5,0.2778,6,1,2,52,25.0,Table Tennis:3; Sailing:1; Swimming:1; Weightlifting:1,4,1
+TPE,Chinese Taipei-1,1956,1960,2004,16,12,0.75,43,7,12,123,76.5,Weightlifting:11; Taekwondo:9; Archery:4; Boxing:4,13,1
+GEO,Georgia,1996,1996,2004,8,8,1.0,47,13,8,47,38.5,Wrestling:22; Judo:15; Weightlifting:7,5,1
+ARM,Armenia,1996,1996,1996,8,7,0.875,24,2,6,38,26.0,Wrestling:11; Weightlifting:9; Boxing:2; Gymnastics:2,4,1
+GRN,Grenada,1984,2012,2012,11,4,0.3636,5,1,2,9,6.0,Athletics:5,1,1
+MGL,Mongolia,1964,1968,2008,15,13,0.8667,31,2,5,61,38.0,Judo:12; Wrestling:10; Boxing:7,4,1
+KOS,Kosovo,2016,2016,2016,3,3,1.0,5,3,2,11,9.0,Judo:5,1,1

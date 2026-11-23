@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="494" viewBox="0 0 960 494" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="960" height="494" fill="#FFFFFF"/>
+<text x="24" y="30" font-size="17" font-weight="600" fill="#1F2933">图 8 · 东道主效应：主办届的增益与赛后的回落</text>
+<text x="24" y="50" font-size="12" fill="#6B7280">横向条 = 主办届相对上届的奖牌增减；圆点 = 赛后一届相对主办届的变化（小项口径）</text>
+<line x1="490.0" y1="64" x2="490.0" y2="454" stroke="#E5E7EB" stroke-width="1"/>
+<text x="24" y="80" font-size="11.5" fill="#1F2933">1964 JPN</text>
+<rect x="490.0" y="71" width="47.3" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="472.8" cy="76" r="4" fill="#D1495B"/>
+<text x="24" y="104" font-size="11.5" fill="#1F2933">1968 MEX</text>
+<rect x="490.0" y="95" width="34.4" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="455.6" cy="100" r="4" fill="#D1495B"/>
+<text x="24" y="128" font-size="11.5" fill="#1F2933">1972 FRG</text>
+<rect x="490.0" y="119" width="60.3" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="485.7" cy="124" r="4" fill="#D1495B"/>
+<text x="24" y="152" font-size="11.5" fill="#1F2933">1976 CAN</text>
+<rect x="490.0" y="143" width="25.8" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="632.0" cy="148" r="4" fill="#D1495B"/>
+<text x="24" y="176" font-size="11.5" fill="#1F2933">1980 URS</text>
+<rect x="490.0" y="167" width="301.3" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="214.6" cy="172" r="4" fill="#D1495B"/>
+<text x="24" y="200" font-size="11.5" fill="#1F2933">1984 USA</text>
+<rect x="490.0" y="191" width="340.0" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="150.0" cy="196" r="4" fill="#D1495B"/>
+<text x="24" y="224" font-size="11.5" fill="#1F2933">1988 KOR</text>
+<rect x="490.0" y="215" width="60.3" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="468.5" cy="220" r="4" fill="#D1495B"/>
+<text x="24" y="248" font-size="11.5" fill="#1F2933">1992 ESP</text>
+<rect x="490.0" y="239" width="77.5" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="468.5" cy="244" r="4" fill="#D1495B"/>
+<text x="24" y="272" font-size="11.5" fill="#1F2933">1996 USA</text>
+<rect x="459.9" y="263" width="30.1" height="10" fill="#D1495B" opacity="0.35"/>
+<circle cx="447.0" cy="268" r="4" fill="#D1495B"/>
+<text x="24" y="296" font-size="11.5" fill="#1F2933">2000 AUS</text>
+<rect x="490.0" y="287" width="73.2" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="455.6" cy="292" r="4" fill="#D1495B"/>
+<text x="24" y="320" font-size="11.5" fill="#1F2933">2004 GRE</text>
+<rect x="490.0" y="311" width="12.9" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="438.4" cy="316" r="4" fill="#D1495B"/>
+<text x="24" y="344" font-size="11.5" fill="#1F2933">2008 CHN</text>
+<rect x="490.0" y="335" width="159.2" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="438.4" cy="340" r="4" fill="#D1495B"/>
+<text x="24" y="368" font-size="11.5" fill="#1F2933">2012 GBR</text>
+<rect x="490.0" y="359" width="73.2" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="498.6" cy="364" r="4" fill="#D1495B"/>
+<text x="24" y="392" font-size="11.5" fill="#1F2933">2016 BRA</text>
+<rect x="490.0" y="383" width="8.6" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="498.6" cy="388" r="4" fill="#D1495B"/>
+<text x="24" y="416" font-size="11.5" fill="#1F2933">2020 JPN</text>
+<rect x="490.0" y="407" width="68.9" height="10" fill="#1F6FEB" opacity="0.35"/>
+<circle cx="438.4" cy="412" r="4" fill="#D1495B"/>
+<text x="24" y="440" font-size="11.5" fill="#1F2933">2024 FRA</text>
+<rect x="490.0" y="431" width="107.6" height="10" fill="#1F6FEB" opacity="0.35"/>
+<text x="842" y="80" font-size="10.5" fill="#6B7280">样本：16 位东道主</text>
+<text x="24" y="480" font-size="10.5" fill="#6B7280">29 位有可比数据的东道主中 26 位赛后奖牌数下降，平均回落 29.2 枚。这是脉冲，不是跃迁。</text>
+</svg>

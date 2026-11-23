@@ -1,0 +1,58 @@
+Sport,首次,末次,届数,记录数,跨度,已消失
+Aeronautics,1936,1936,1,1,0,True
+Alpinism,1932,1936,2,4,4,True
+Archery,1900,2024,18,2846,124,False
+Art Competitions,1912,1948,7,3578,36,True
+Athletics,1896,2024,30,42824,128,False
+Badminton,1992,2024,9,1816,32,False
+Baseball,1992,2008,5,894,16,True
+Baseball/Softball,2020,2020,1,234,0,True
+Basketball,1936,2024,21,5240,88,False
+Basque Pelota,1900,1900,1,2,0,True
+Beach Volleyball,1996,2024,8,756,28,False
+Boxing,1904,2024,27,6584,120,False
+Breaking,2024,2024,1,33,0,False
+Canoeing,1936,2024,21,7183,88,False
+Cricket,1900,1900,1,24,0,True
+Croquet,1900,1900,1,19,0,True
+Cycling,1896,2024,30,12429,128,False
+Diving,1904,2024,28,3169,120,False
+Equestrianism,1900,2024,27,7179,124,False
+Fencing,1896,2024,30,11397,128,False
+Figure Skating,1908,1920,2,54,12,True
+Football,1900,2024,28,7861,124,False
+Golf,1900,2024,5,487,124,False
+Gymnastics,1896,2024,30,29760,128,False
+Handball,1936,2024,15,4419,88,False
+Hockey,1908,2024,25,6264,116,False
+Ice Hockey,1920,1920,1,60,0,True
+Jeu De Paume,1908,1908,1,11,0,True
+Judo,1964,2024,15,4876,60,False
+Karate,2020,2020,1,81,0,True
+Lacrosse,1904,1908,2,60,4,True
+Modern Pentathlon,1912,2024,26,1821,112,False
+Motorboating,1908,1908,1,17,0,True
+Polo,1900,1936,5,95,36,True
+Racquets,1908,1908,1,12,0,True
+Roque,1904,1904,1,4,0,True
+Rowing,1900,2024,29,11425,124,False
+Rugby,1900,1924,4,162,24,True
+Rugby Sevens,2016,2024,3,928,8,False
+Sailing,1900,2024,28,7266,124,False
+Shooting,1896,2024,28,12260,128,False
+Skateboarding,2020,2024,2,168,4,False
+Softball,1996,2008,4,478,12,True
+Sport Climbing,2020,2024,2,108,4,False
+Surfing,2020,2024,2,88,4,False
+Swimming,1896,2024,30,26479,128,False
+Synchronized Swimming,1984,2024,11,1166,40,False
+Table Tennis,1988,2024,10,2480,36,False
+Taekwondo,2000,2024,7,870,24,False
+Tennis,1896,2024,17,3398,128,False
+Trampolining,2000,2016,5,152,16,True
+Triathlon,2000,2024,7,822,24,False
+Tug-Of-War,1900,1920,5,138,20,True
+Volleyball,1964,2024,16,4003,60,False
+Water Polo,1900,2024,29,4418,124,False
+Weightlifting,1896,2024,27,4234,128,False
+Wrestling,1896,2024,29,7695,128,False

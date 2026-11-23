@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="960" height="480" fill="#FFFFFF"/>
+<text x="64" y="26" font-size="17" font-weight="600" fill="#1F2933">图 7 · 换个口径就换张榜：近五届排名位移最大的国家</text>
+<text x="64" y="44" font-size="12" fill="#6B7280">左列为小项口径名次，右列为运动员行口径名次；排名数值越小越靠前</text>
+<text x="124" y="42" font-size="11" fill="#6B7280">小项口径</text>
+<text x="760" y="42" font-size="11" text-anchor="end" fill="#6B7280">运动员行口径</text>
+<line x1="124" y1="374.4" x2="760" y2="176.0" stroke="#1F6FEB" stroke-width="2" opacity="0.8"/>
+<circle cx="124" cy="374.4" r="4" fill="#1F6FEB"/>
+<circle cx="760" cy="176.0" r="4" fill="#1F6FEB"/>
+<text x="114" y="378.4" font-size="11" text-anchor="end" fill="#1F2933">FIJ #67</text>
+<text x="770" y="180.0" font-size="11" fill="#1F2933">#25</text>
+<line x1="124" y1="317.7" x2="760" y2="204.4" stroke="#1F6FEB" stroke-width="2" opacity="0.8"/>
+<circle cx="124" cy="317.7" r="4" fill="#1F6FEB"/>
+<circle cx="760" cy="204.4" r="4" fill="#1F6FEB"/>
+<text x="114" y="321.7" font-size="11" text-anchor="end" fill="#1F2933">MEX #55</text>
+<text x="770" y="208.4" font-size="11" fill="#1F2933">#31</text>
+<line x1="124" y1="246.9" x2="760" y2="152.4" stroke="#1F6FEB" stroke-width="2" opacity="0.8"/>
+<circle cx="124" cy="246.9" r="4" fill="#1F6FEB"/>
+<circle cx="760" cy="152.4" r="4" fill="#1F6FEB"/>
+<text x="114" y="250.9" font-size="11" text-anchor="end" fill="#1F2933">ARG #40</text>
+<text x="770" y="156.4" font-size="11" fill="#1F2933">#20</text>
+<line x1="124" y1="223.3" x2="760" y2="143.0" stroke="#1F6FEB" stroke-width="2" opacity="0.8"/>
+<circle cx="124" cy="223.3" r="4" fill="#1F6FEB"/>
+<circle cx="760" cy="143.0" r="4" fill="#1F6FEB"/>
+<text x="114" y="227.3" font-size="11" text-anchor="end" fill="#1F2933">SRB #35</text>
+<text x="770" y="147.0" font-size="11" fill="#1F2933">#18</text>
+<line x1="124" y1="374.4" x2="760" y2="294.1" stroke="#1F6FEB" stroke-width="2" opacity="0.8"/>
+<circle cx="124" cy="374.4" r="4" fill="#1F6FEB"/>
+<circle cx="760" cy="294.1" r="4" fill="#1F6FEB"/>
+<text x="114" y="378.4" font-size="11" text-anchor="end" fill="#1F2933">TTO #67</text>
+<text x="770" y="298.1" font-size="11" fill="#1F2933">#50</text>
+<line x1="124" y1="176.0" x2="760" y2="232.7" stroke="#D1495B" stroke-width="2" opacity="0.8"/>
+<circle cx="124" cy="176.0" r="4" fill="#D1495B"/>
+<circle cx="760" cy="232.7" r="4" fill="#D1495B"/>
+<text x="114" y="180.0" font-size="11" text-anchor="end" fill="#1F2933">KAZ #25</text>
+<text x="770" y="236.7" font-size="11" fill="#1F2933">#37</text>
+<line x1="124" y1="171.3" x2="760" y2="228.0" stroke="#D1495B" stroke-width="2" opacity="0.8"/>
+<circle cx="124" cy="171.3" r="4" fill="#D1495B"/>
+<circle cx="760" cy="228.0" r="4" fill="#D1495B"/>
+<text x="114" y="175.3" font-size="11" text-anchor="end" fill="#1F2933">IRI #24</text>
+<text x="770" y="232.0" font-size="11" fill="#1F2933">#36</text>
+<line x1="124" y1="138.3" x2="760" y2="194.9" stroke="#D1495B" stroke-width="2" opacity="0.8"/>
+<circle cx="124" cy="138.3" r="4" fill="#D1495B"/>
+<circle cx="760" cy="194.9" r="4" fill="#D1495B"/>
+<text x="114" y="142.3" font-size="11" text-anchor="end" fill="#1F2933">KEN #17</text>
+<text x="770" y="198.9" font-size="11" fill="#1F2933">#29</text>
+<text x="64" y="450" font-size="10.5" fill="#6B7280">蓝线上移 = 行口径下排名变好（团体项目多的国家受益）；红线下降 = 个人项目为主的国家被挤下去。</text>
+</svg>

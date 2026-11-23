@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>数说奥运 1896–2024 · 数据看板</title>
+<style>
+  :root {
+    --bg:#0F141A; --panel:#161D26; --line:#25303D; --ink:#E8EDF2; --muted:#8FA0B2;
+    --gold:#C9A227; --accent:#4C8DFF; --warn:#E0637A;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+  header { padding:28px 32px 8px; }
+  h1 { margin:0; font-size:22px; letter-spacing:.02em; }
+  .sub { margin-top:6px; color:var(--muted); font-size:13px; line-height:1.7; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+           gap:12px; padding:16px 32px 4px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .kpi .v { font-size:24px; font-weight:600; color:var(--gold); font-variant-numeric:tabular-nums; }
+  .kpi .k { font-size:12px; color:var(--muted); margin-top:4px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(460px,1fr));
+           gap:14px; padding:14px 32px 32px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:12px 14px 8px; }
+  .card h2 { margin:2px 0 8px; font-size:14px; font-weight:600; color:var(--ink); }
+  .card .note { font-size:11px; color:var(--muted); margin-top:4px; line-height:1.6; }
+  .chart { width:100%; height:300px; }
+  footer { padding:0 32px 36px; color:var(--muted); font-size:11.5px; line-height:1.9; }
+  code { background:#1E2833; padding:1px 5px; border-radius:4px; font-size:11px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>数说奥运 1896–2024</h1>
+  <div class="sub">
+    夏季奥运会全部参赛与奖牌记录，252,565 行 × 11 列。
+    除标注外，奖牌数均为<strong>小项口径</strong>（同一届、同一小项、同一奖牌颜色、同一 NOC 计 1 枚）；1906 届间奥运会默认排除。
+  </div>
+</header>
+
+<div class="kpis">
+  <div class="kpi"><div class="v">17,901</div><div class="k">小项口径奖牌总数</div></div>
+  <div class="kpi"><div class="v">38,360</div><div class="k">运动员行口径奖牌总数</div></div>
+  <div class="kpi"><div class="v">53.3%</div><div class="k">换口径后的收缩幅度</div></div>
+  <div class="kpi"><div class="v">0% → 49.1%</div><div class="k">女性参赛占比（1896→2024）</div></div>
+  <div class="kpi"><div class="v">57 / 36</div><div class="k">历史运动数 / 2024 仍在办</div></div>
+</div>
+
+<div class="grid">
+  <div class="card"><h2>历史总奖牌榜（前 15）</h2><div id="c1" class="chart"></div>
+    <div class="note">小项口径，按金牌数排序。换行口径会让名次大幅变动，见「口径的魔力」。</div></div>
+
+  <div class="card"><h2>奖牌膨胀：奖牌总数与代表团数</h2><div id="c2" class="chart"></div>
+    <div class="note">2024 年奖牌总量是 1896 年的 3.46 倍，代表团数是 6.65 倍。</div></div>
+
+  <div class="card"><h2>她的奥运：女性参赛占比</h2><div id="c3" class="chart"></div>
+    <div class="note">运动员行口径。不是匀速上升，1952 / 1976 / 1996 三届出现明显阶跃。</div></div>
+
+  <div class="card"><h2>口径的魔力：2024 金牌双口径</h2><div id="c4" class="chart"></div>
+    <div class="note">同一数据集，去重键不同导致 USA 37→131、NED 14→67。与 IOC 官方数字存在差异。</div></div>
+
+  <div class="card"><h2>国家兴衰：重点国家逐届奖牌</h2><div id="c5" class="chart"></div>
+    <div class="note">小项口径。URS 仅 9 届即列历史第 2；GDR 仅 5 届；CHN 自 1932 年首现、1984 年后陡升。</div></div>
+
+  <div class="card"><h2>东道主效应：主办届增益 vs 赛后回落</h2><div id="c6" class="chart"></div>
+    <div class="note">29 位有可比数据的东道主中 26 位赛后下降，平均回落 29.2 枚。少数例外见报告表 7。</div></div>
+
+  <div class="card" style="grid-column:1/-1"><h2>消失的运动：存续区间（记录数前 20）</h2>
+    <div id="c7" class="chart" style="height:420px"></div>
+    <div class="note">艺术竞赛 1912–1948 累积 3,578 条记录，是体量最大的「消失项目」；拔河 1900–1920。</div></div>
+</div>
+
+<footer>
+  数据源：Kaggle <em>Summer Olympics Medals (1896-2024)</em>（CC BY-NC-SA 4.0），
+  上游为 Olympics 124 years Dataset（till 2020）与 Paris 2024 Olympic Summer Games。
+  本页所有数字由项目内 Python 脚本现算，复现方式见 README。
+  口径说明见 <code>docs/02_数据质量与口径说明书.md</code>。
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script>
+const DATA = {"history": {"teams": ["United States", "Soviet Union", "Great Britain", "China", "Germany", "France", "Italy", "Japan", "Hungary", "Australia", "Sweden", "Russia", "East Germany", "Netherlands", "South Korea"], "gold": [1095, 394, 305, 302, 250, 240, 234, 189, 188, 181, 155, 153, 153, 112, 109], "silver": [880, 317, 347, 218, 276, 279, 206, 160, 163, 192, 180, 143, 129, 113, 98], "bronze": [773, 294, 343, 195, 302, 299, 228, 190, 181, 227, 184, 164, 127, 138, 108]}, "inflation": {"years": [1896, 1900, 1904, 1908, 1912, 1920, 1924, 1928, 1932, 1936, 1948, 1952, 1956, 1960, 1964, 1968, 1972, 1976, 1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024], "medals": [120, 291, 279, 320, 316, 446, 391, 356, 370, 422, 439, 457, 467, 461, 501, 527, 600, 613, 631, 685, 738, 813, 841, 925, 927, 957, 962, 973, 1066, 1007], "nocs": [12, 31, 15, 22, 29, 29, 45, 46, 47, 49, 59, 69, 72, 84, 93, 112, 121, 92, 80, 140, 159, 169, 197, 200, 201, 204, 205, 207, 206, 206]}, "gender": {"years": [1896, 1900, 1904, 1908, 1912, 1920, 1924, 1928, 1932, 1936, 1948, 1952, 1956, 1960, 1964, 1968, 1972, 1976, 1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024], "ratio": [0.0, 1.7, 1.23, 1.52, 2.15, 3.12, 4.66, 8.09, 11.69, 7.19, 9.8, 18.1, 17.42, 17.67, 17.5, 20.69, 21.28, 25.14, 24.42, 25.88, 29.43, 31.78, 36.34, 39.3, 41.26, 42.76, 45.01, 45.46, 48.05, 49.1]}, "caliber": {"nocs": ["CHN", "USA", "JPN", "AUS", "NED", "GBR", "FRA", "KOR", "ITA", "GER"], "event": [38, 37, 20, 18, 14, 13, 13, 13, 12, 11], "athlete": [71, 131, 27, 33, 67, 39, 53, 21, 31, 21]}, "host": {"labels": ["1900 FRA", "1904 USA", "1908 GBR", "1912 SWE", "1920 BEL", "1924 FRA", "1928 NED", "1932 USA", "1936 GER", "1948 GBR", "1952 FIN", "1956 AUS", "1960 ITA", "1964 JPN", "1968 MEX", "1972 FRG", "1976 CAN", "1980 URS", "1984 USA", "1988 KOR", "1992 ESP", "1996 USA", "2000 AUS", "2004 GRE", "2008 CHN", "2012 GBR", "2016 BRA", "2020 JPN", "2024 FRA"], "gain": [91.0, 176.0, 141.0, 40.0, 36.0, -2.0, 12.0, 54.0, 77.0, 13.0, 0.0, 24.0, 11.0, 11.0, 8.0, 14.0, 6.0, 70.0, 79.0, 14.0, 18.0, -7.0, 17.0, 3.0, 37.0, 17.0, 2.0, 16.0, 25.0], "back": [-100.0, -184.0, -102.0, -1.0, -29.0, -15.0, -15.0, -53.0, -77.0, -16.0, -7.0, -13.0, -9.0, -4.0, -8.0, -1.0, 33.0, -64.0, -79.0, -5.0, -5.0, -10.0, -8.0, -12.0, -12.0, 2.0, 2.0, -12.0, null]}, "focus": {"years": [1896, 1900, 1904, 1908, 1912, 1920, 1924, 1928, 1932, 1936, 1948, 1952, 1956, 1960, 1964, 1968, 1972, 1976, 1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024], "series": [{"name": "Australia（AUS）", "data": [[1896, 3], [1900, 6], [1904, 4], [1920, 3], [1924, 6], [1928, 4], [1932, 5], [1936, 1], [1948, 13], [1952, 11], [1956, 35], [1960, 22], [1964, 18], [1968, 17], [1972, 17], [1976, 5], [1980, 9], [1984, 24], [1988, 14], [1992, 27], [1996, 41], [2000, 58], [2004, 50], [2008, 46], [2012, 35], [2016, 29], [2020, 45], [2024, 52]]}, {"name": "China（CHN）", "data": [[1932, 0], [1936, 0], [1948, 0], [1952, 0], [1984, 32], [1988, 28], [1992, 53], [1996, 50], [2000, 58], [2004, 63], [2008, 100], [2012, 88], [2016, 70], [2020, 85], [2024, 88]]}, {"name": "France（FRA）", "data": [[1896, 11], [1900, 102], [1904, 2], [1908, 19], [1912, 15], [1920, 42], [1924, 40], [1928, 25], [1932, 20], [1936, 19], [1948, 32], [1952, 18], [1956, 14], [1960, 5], [1964, 15], [1968, 15], [1972, 13], [1976, 9], [1980, 14], [1984, 28], [1988, 16], [1992, 29], [1996, 37], [2000, 38], [2004, 33], [2008, 41], [2012, 35], [2016, 42], [2020, 32], [2024, 57]]}, {"name": "Great Britain（GBR）", "data": [[1896, 9], [1900, 42], [1904, 2], [1908, 143], [1912, 41], [1920, 43], [1924, 35], [1928, 22], [1932, 17], [1936, 14], [1948, 27], [1952, 11], [1956, 24], [1960, 20], [1964, 18], [1968, 13], [1972, 18], [1976, 13], [1980, 21], [1984, 37], [1988, 24], [1992, 20], [1996, 15], [2000, 28], [2004, 30], [2008, 48], [2012, 65], [2016, 67], [2020, 65], [2024, 63]]}, {"name": "East Germany（GDR）", "data": [[1968, 25], [1972, 66], [1976, 90], [1980, 126], [1988, 102]]}, {"name": "Germany（GER）", "data": [[1896, 14], [1900, 8], [1904, 16], [1908, 13], [1912, 26], [1928, 39], [1932, 24], [1936, 101], [1952, 24], [1956, 26], [1960, 42], [1964, 50], [1992, 82], [1996, 65], [2000, 56], [2004, 49], [2008, 41], [2012, 44], [2016, 42], [2020, 37], [2024, 29]]}, {"name": "Japan（JPN）", "data": [[1912, 0], [1920, 2], [1924, 1], [1928, 5], [1932, 18], [1936, 20], [1952, 8], [1956, 17], [1960, 18], [1964, 29], [1968, 25], [1972, 29], [1976, 25], [1984, 31], [1988, 14], [1992, 22], [1996, 14], [2000, 18], [2004, 37], [2008, 25], [2012, 38], [2016, 41], [2020, 57], [2024, 45]]}, {"name": "South Korea（KOR）", "data": [[1948, 2], [1952, 2], [1956, 2], [1960, 0], [1964, 3], [1968, 2], [1972, 1], [1976, 6], [1984, 19], [1988, 33], [1992, 28], [1996, 27], [2000, 28], [2004, 30], [2008, 31], [2012, 28], [2016, 21], [2020, 20], [2024, 32]]}, {"name": "Soviet Union（URS）", "data": [[1952, 70], [1956, 98], [1960, 103], [1964, 93], [1968, 91], [1972, 99], [1976, 125], [1980, 195], [1988, 131]]}, {"name": "United States（USA）", "data": [[1896, 19], [1900, 54], [1904, 230], [1908, 46], [1912, 63], [1920, 95], [1924, 99], [1928, 56], [1932, 110], [1936, 57], [1948, 84], [1952, 76], [1956, 74], [1960, 71], [1964, 90], [1968, 107], [1972, 94], [1976, 94], [1984, 173], [1988, 94], [1992, 108], [1996, 101], [2000, 91], [2004, 101], [2008, 110], [2012, 103], [2016, 121], [2020, 109], [2024, 118]]}]}, "life": [{"Sport": "Athletics", "首次": 1896, "末次": 2024, "记录数": 42824, "已消失": false}, {"Sport": "Gymnastics", "首次": 1896, "末次": 2024, "记录数": 29760, "已消失": false}, {"Sport": "Swimming", "首次": 1896, "末次": 2024, "记录数": 26479, "已消失": false}, {"Sport": "Cycling", "首次": 1896, "末次": 2024, "记录数": 12429, "已消失": false}, {"Sport": "Shooting", "首次": 1896, "末次": 2024, "记录数": 12260, "已消失": false}, {"Sport": "Rowing", "首次": 1900, "末次": 2024, "记录数": 11425, "已消失": false}, {"Sport": "Fencing", "首次": 1896, "末次": 2024, "记录数": 11397, "已消失": false}, {"Sport": "Football", "首次": 1900, "末次": 2024, "记录数": 7861, "已消失": false}, {"Sport": "Wrestling", "首次": 1896, "末次": 2024, "记录数": 7695, "已消失": false}, {"Sport": "Sailing", "首次": 1900, "末次": 2024, "记录数": 7266, "已消失": false}, {"Sport": "Canoeing", "首次": 1936, "末次": 2024, "记录数": 7183, "已消失": false}, {"Sport": "Equestrianism", "首次": 1900, "末次": 2024, "记录数": 7179, "已消失": false}, {"Sport": "Boxing", "首次": 1904, "末次": 2024, "记录数": 6584, "已消失": false}, {"Sport": "Hockey", "首次": 1908, "末次": 2024, "记录数": 6264, "已消失": false}, {"Sport": "Basketball", "首次": 1936, "末次": 2024, "记录数": 5240, "已消失": false}, {"Sport": "Judo", "首次": 1964, "末次": 2024, "记录数": 4876, "已消失": false}, {"Sport": "Handball", "首次": 1936, "末次": 2024, "记录数": 4419, "已消失": false}, {"Sport": "Water Polo", "首次": 1900, "末次": 2024, "记录数": 4418, "已消失": false}, {"Sport": "Weightlifting", "首次": 1896, "末次": 2024, "记录数": 4234, "已消失": false}, {"Sport": "Volleyball", "首次": 1964, "末次": 2024, "记录数": 4003, "已消失": false}]};
+const C = { gold:'#C9A227', silver:'#9AA0A6', bronze:'#A9714B',
+            accent:'#4C8DFF', warn:'#E0637A', ink:'#E8EDF2', muted:'#8FA0B2',
+            line:'#25303D' };
+const AXIS = { axisLine:{lineStyle:{color:C.line}},
+               axisLabel:{color:C.muted, fontSize:11},
+               splitLine:{lineStyle:{color:C.line, opacity:.5}} };
+const charts = [];
+function init(id, option) {
+  const el = document.getElementById(id);
+  const c = echarts.init(el, null, {renderer:'canvas'});
+  c.setOption(option); charts.push(c); return c;
+}
+window.addEventListener('resize', () => charts.forEach(c => c.resize()));
+
+// 1 历史总榜
+init('c1', {
+  tooltip:{trigger:'axis', axisPointer:{type:'shadow'}},
+  legend:{top:0, textStyle:{color:C.muted, fontSize:11}},
+  grid:{left:96, right:24, top:34, bottom:24},
+  xAxis:{type:'value', ...AXIS},
+  yAxis:{type:'category', data:DATA.history.teams.slice().reverse(), ...AXIS},
+  series:[
+    {name:'金', type:'bar', stack:'m', data:DATA.history.gold.slice().reverse(),
+      itemStyle:{color:C.gold}},
+    {name:'银', type:'bar', stack:'m', data:DATA.history.silver.slice().reverse(),
+      itemStyle:{color:C.silver}},
+    {name:'铜', type:'bar', stack:'m', data:DATA.history.bronze.slice().reverse(),
+      itemStyle:{color:C.bronze}}
+  ]
+});
+
+// 2 奖牌膨胀
+init('c2', {
+  tooltip:{trigger:'axis'},
+  legend:{top:0, textStyle:{color:C.muted, fontSize:11}},
+  grid:{left:56, right:56, top:34, bottom:32},
+  xAxis:{type:'category', data:DATA.inflation.years, ...AXIS},
+  yAxis:[
+    {type:'value', name:'奖牌', ...AXIS, axisLabel:{color:C.muted, fontSize:11}},
+    {type:'value', name:'代表团', ...AXIS, splitLine:{show:false},
+      axisLabel:{color:C.muted, fontSize:11}}
+  ],
+  series:[
+    {name:'奖牌总数', type:'line', smooth:true, data:DATA.inflation.medals,
+      lineStyle:{width:2.4, color:C.gold}, itemStyle:{color:C.gold},
+      areaStyle:{color:'rgba(201,162,39,.14)'}},
+    {name:'代表团数', type:'line', yAxisIndex:1, smooth:true, data:DATA.inflation.nocs,
+      lineStyle:{width:2.2, color:C.accent}, itemStyle:{color:C.accent}}
+  ]
+});
+
+// 3 女性占比
+init('c3', {
+  tooltip:{trigger:'axis', valueFormatter:v=>v+'%'},
+  grid:{left:56, right:24, top:30, bottom:32},
+  xAxis:{type:'category', data:DATA.gender.years, ...AXIS},
+  yAxis:{type:'value', max:55, ...AXIS, axisLabel:{color:C.muted, fontSize:11, formatter:'{value}%'}},
+  series:[{name:'女性占比', type:'line', smooth:true, data:DATA.gender.ratio,
+    lineStyle:{width:2.6, color:C.warn}, itemStyle:{color:C.warn},
+    areaStyle:{color:'rgba(224,99,122,.16)'}}]
+});
+
+// 4 双口径
+init('c4', {
+  tooltip:{trigger:'axis', axisPointer:{type:'shadow'}},
+  legend:{top:0, textStyle:{color:C.muted, fontSize:11}},
+  grid:{left:56, right:24, top:34, bottom:32},
+  xAxis:{type:'category', data:DATA.caliber.nocs, ...AXIS},
+  yAxis:{type:'value', name:'金牌', ...AXIS},
+  series:[
+    {name:'小项口径', type:'bar', data:DATA.caliber.event, itemStyle:{color:C.accent}},
+    {name:'运动员行口径', type:'bar', data:DATA.caliber.athlete, itemStyle:{color:C.warn}}
+  ]
+});
+
+// 5 国家曲线
+init('c5', {
+  tooltip:{trigger:'axis'},
+  legend:{top:0, type:'scroll', textStyle:{color:C.muted, fontSize:11}},
+  grid:{left:56, right:24, top:48, bottom:32},
+  xAxis:{type:'value', min:1896, max:2024, ...AXIS},
+  yAxis:{type:'value', name:'奖牌', ...AXIS},
+  series: DATA.focus.series.map(function(s, i) {
+    var pal = ['#4C8DFF','#E0637A','#C9A227','#3FB98A','#A98BFF','#F0A05A','#2AA7B5','#D96FB0','#7C8B9C','#B8925A'];
+    return {name:s.name, type:'line', showSymbol:false, connectNulls:false,
+             data:s.data, lineStyle:{width:1.8, color:pal[i%10]},
+             itemStyle:{color:pal[i%10]}};
+  })
+});
+
+// 6 东道主
+init('c6', {
+  tooltip:{trigger:'axis', axisPointer:{type:'shadow'}},
+  legend:{top:0, textStyle:{color:C.muted, fontSize:11}},
+  grid:{left:96, right:24, top:34, bottom:32},
+  xAxis:{type:'value', ...AXIS},
+  yAxis:{type:'category', data:DATA.host.labels.slice().reverse(), ...AXIS},
+  series:[
+    {name:'主办届较上届增幅', type:'bar', data:DATA.host.gain.slice().reverse(),
+      itemStyle:{color:C.accent}},
+    {name:'赛后回落', type:'scatter', symbolSize:9,
+      data:DATA.host.back.slice().reverse(), itemStyle:{color:C.warn}}
+  ]
+});
+
+// 7 项目生命周期
+init('c7', {
+  tooltip:{trigger:'item', formatter:p => {
+    const d = DATA.life[p.dataIndex];
+    return d.Sport + '<br/>首次 ' + d.首次 + ' · 末次 ' + d.末次 +
+           '<br/>记录数 ' + d.记录数 + (d.已消失 ? '<br/><span style="color:#E0637A">已消失</span>' : '');
+  }},
+  grid:{left:150, right:40, top:20, bottom:50},
+  xAxis:{type:'value', min:1896, max:2030, ...AXIS, name:'年份'},
+  yAxis:{type:'category', data:DATA.life.map(d=>d.Sport).reverse(), ...AXIS},
+  series:[
+    {name:'起点', type:'bar', stack:'life',
+      data:DATA.life.map(d=>d.首次).reverse(), itemStyle:{color:'transparent'}},
+    {name:'存续', type:'bar', stack:'life',
+      data:DATA.life.map(d=>Math.max(d.末次-d.首次, 2)).reverse(),
+      itemStyle:{color:C.bronze}}
+  ]
+});
+</script>
+</body>
+</html>

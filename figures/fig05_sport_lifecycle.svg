@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="484" viewBox="0 0 960 484" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="960" height="484" fill="#FFFFFF"/>
+<text x="24" y="30" font-size="17" font-weight="600" fill="#1F2933">图 5 · 消失的运动：存续区间与记录规模</text>
+<text x="24" y="50" font-size="12" fill="#6B7280">按记录数降序取前 14 项；横条长度 = 首次到末次举办年份</text>
+<text x="24" y="86" font-size="12" fill="#1F2933">Art Competitions</text>
+<rect x="270.0" y="74" width="180.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="86" font-size="11" fill="#6B7280">3,578 条</text>
+<text x="24" y="112" font-size="12" fill="#1F2933">Baseball</text>
+<rect x="670.0" y="100" width="80.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="112" font-size="11" fill="#6B7280">894 条</text>
+<text x="24" y="138" font-size="12" fill="#1F2933">Softball</text>
+<rect x="690.0" y="126" width="60.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="138" font-size="11" fill="#6B7280">478 条</text>
+<text x="24" y="164" font-size="12" fill="#1F2933">Baseball/Softball</text>
+<rect x="810.0" y="152" width="10.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="164" font-size="11" fill="#6B7280">234 条</text>
+<text x="24" y="190" font-size="12" fill="#1F2933">Rugby</text>
+<rect x="210.0" y="178" width="120.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="190" font-size="11" fill="#6B7280">162 条</text>
+<text x="24" y="216" font-size="12" fill="#1F2933">Trampolining</text>
+<rect x="710.0" y="204" width="80.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="216" font-size="11" fill="#6B7280">152 条</text>
+<text x="24" y="242" font-size="12" fill="#1F2933">Tug-Of-War</text>
+<rect x="210.0" y="230" width="100.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="242" font-size="11" fill="#6B7280">138 条</text>
+<text x="24" y="268" font-size="12" fill="#1F2933">Polo</text>
+<rect x="210.0" y="256" width="180.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="268" font-size="11" fill="#6B7280">95 条</text>
+<text x="24" y="294" font-size="12" fill="#1F2933">Karate</text>
+<rect x="810.0" y="282" width="10.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="294" font-size="11" fill="#6B7280">81 条</text>
+<text x="24" y="320" font-size="12" fill="#1F2933">Lacrosse</text>
+<rect x="230.0" y="308" width="20.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="320" font-size="11" fill="#6B7280">60 条</text>
+<text x="24" y="346" font-size="12" fill="#1F2933">Ice Hockey</text>
+<rect x="310.0" y="334" width="10.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="346" font-size="11" fill="#6B7280">60 条</text>
+<text x="24" y="372" font-size="12" fill="#1F2933">Figure Skating</text>
+<rect x="250.0" y="360" width="60.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="372" font-size="11" fill="#6B7280">54 条</text>
+<text x="24" y="398" font-size="12" fill="#1F2933">Cricket</text>
+<rect x="210.0" y="386" width="10.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="398" font-size="11" fill="#6B7280">24 条</text>
+<text x="24" y="424" font-size="12" fill="#1F2933">Croquet</text>
+<rect x="210.0" y="412" width="10.0" height="15" rx="3" fill="#A9714B"/>
+<text x="840" y="424" font-size="11" fill="#6B7280">19 条</text>
+<text x="190.0" y="456" font-size="11" text-anchor="middle" fill="#6B7280">1896</text>
+<text x="390.0" y="456" font-size="11" text-anchor="middle" fill="#6B7280">1936</text>
+<text x="590.0" y="456" font-size="11" text-anchor="middle" fill="#6B7280">1976</text>
+<text x="830.0" y="456" font-size="11" text-anchor="middle" fill="#6B7280">2024</text>
+</svg>

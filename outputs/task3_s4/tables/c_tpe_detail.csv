@@ -1,0 +1,17 @@
+﻿Year,NOC,Team,athletes,sports,events,Gold_event,Silver_event,Bronze_event,Total_event,Total_athlete,n_sports_medal,top_sport,top1_share,medal_sport_list,has_medal_event
+1956,TPE,Chinese Taipei-1,23,5,13,0,0,0,0,0,,,,,0
+1960,TPE,Chinese Taipei-1,31,6,18,0,1,0,1,1,1.0,Athletics,1.0,Athletics,1
+1964,TPE,Chinese Taipei-1,96,7,46,0,0,0,0,0,,,,,0
+1968,TPE,Chinese Taipei-1,93,8,57,0,0,1,1,1,1.0,Athletics,1.0,Athletics,1
+1972,TPE,Chinese Taipei-1,44,10,41,0,0,0,0,0,,,,,0
+1984,TPE,Chinese Taipei-1,52,12,40,0,0,1,1,1,1.0,Weightlifting,1.0,Weightlifting,1
+1988,TPE,Chinese Taipei-1,123,13,84,0,0,0,0,0,,,,,0
+1992,TPE,Chinese Taipei-1,38,7,15,0,1,0,1,20,1.0,Baseball,1.0,Baseball,1
+1996,TPE,Chinese Taipei-1,107,14,63,0,1,0,1,1,1.0,Table Tennis,1.0,Table Tennis,1
+2000,TPE,Chinese Taipei-1,75,14,59,0,1,4,5,5,3.0,Taekwondo,0.4,Table Tennis; Taekwondo; Weightlifting,1
+2004,TPE,Chinese Taipei-1,104,14,52,2,2,1,5,9,2.0,Taekwondo,0.6,Archery; Taekwondo,1
+2008,TPE,Chinese Taipei-1,92,15,41,0,0,4,4,4,2.0,Taekwondo,0.5,Taekwondo; Weightlifting,1
+2012,TPE,Chinese Taipei-1,55,14,40,0,1,1,2,2,2.0,Taekwondo,0.5,Taekwondo; Weightlifting,1
+2016,TPE,Chinese Taipei-1,67,18,46,1,0,2,3,5,2.0,Weightlifting,0.6666666666666666,Archery; Weightlifting,1
+2020,TPE,Chinese Taipei-1,117,18,61,2,4,6,12,16,10.0,Badminton,0.16666666666666666,Archery; Badminton; Boxing; Golf; Gymnastics; Judo; Karate; Table Tennis; Taekwondo; Weightlifting,1
+2024,TPE,Chinese Taipei-1,78,16,47,2,0,5,7,8,5.0,Boxing,0.42857142857142855,Badminton; Boxing; Gymnastics; Shooting; Weightlifting,1
